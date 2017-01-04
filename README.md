@@ -29,3 +29,4 @@ The first part of the project will be spent in defining clearer objective. Then 
 
 ## Interesting links
 - [Mapping the hometowns of billboard hot 100 artists](http://thedataface.com/mapping-the-hometowns-of-billboard-hot-100-artsts/)
+- [Le bilan des festivals de l'année 2016](http://www.touslesfestivals.com/actualites/le-bilan-des-festivals-de-lannee-2016-121216)
