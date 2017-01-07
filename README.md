@@ -9,7 +9,7 @@ Cyril Pecoraro, Charlotte Burki, Mathieu Clavel
 For our project, we want to look into the cultural aspects of Swizerland, more specifically its musical life. We will gather informations from the web about concerts happening throughout the country and the artists related, and try to get useful insights out of it, which has been little done here so far according to our sources.
 
 ## Data description 
-To this purpose, we will look into mainsteams platforms of today and before, such as [lastfm](http://www.last.fm), which also has an [API](http://www.last.fm/api) or [bandsintown](http://news.bandsintown.com/home) which also has an [API](https://www.bandsintown.com/api/overview), as well as Swiss ticketsale platforms and online cultural agendas.
+To this purpose, we will look into mainsteams platforms of today and before, such as [lastfm](http://www.last.fm), which also has an [API](http://www.last.fm/api) or [bandsintown](http://news.bandsintown.com/home) which also has an [API](https://www.bandsintown.com/api/overview), as well as Swiss ticketsale platforms and online cultural agendas such as [PetziTicket](https://www.petzitickets.ch/index.php?research_date=02%2F02%2F2014&surch_go=), (where data can get accessed by specifying a date).
 
 The idea is to get the events happening in Switzerland, their dates and artists.
 
