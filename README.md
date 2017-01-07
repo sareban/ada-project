@@ -35,4 +35,7 @@ The first part of the project will be spent in defining clearer objective. Then 
 - [Mapping the hometowns of billboard hot 100 artists](http://thedataface.com/mapping-the-hometowns-of-billboard-hot-100-artsts/)
 - [Le bilan des festivals de l'année 2016](http://www.touslesfestivals.com/actualites/le-bilan-des-festivals-de-lannee-2016-121216)
 - [Stats soci-demographiques musique suisse](https://www.bfs.admin.ch/bfs/fr/home/statistiques/culture-medias-societe-information-sport.assetdetail.282381.html)
-- [carte des festivals suisses](https://www.festigo.ch/#!/fr/festimap/all)
+- [Carte des festivals suisses](https://www.festigo.ch/#!/fr/festimap/all)
+- [Evolution of genres in the montreux jazz festival](http://kirellbenzi.com/blog/evolution-of-genres-in-the-montreux-jazz-festival/)
+- [Data analysis Montreux Jazz Festival](http://kirellbenzi.com/blog/hello-montreux-jazz-festival/)
+- [Artist Map of Montreux Jazz Festival](http://kirellbenzi.com/blog/montreux-jazz-festival-artists-map/)
