@@ -20,6 +20,10 @@ It will also be possible to link the artists to their position in the billboard.
 
 Finally, it is aslo possible to compare the situation in Switzerland and the situation in other countries of Europe.
 
+**UPDATE 01/2017 : Main problem**
+- Most of the API don't allow to search event by localization, they need to have the artist name.
+- Hard to find data for the previous years.
+
 ## Deliverables
 The dataset that will be built and which doens't exist yet according to our researches, will be one of the delivrable.
 Another delivrable will be an interractive map.
@@ -30,3 +34,5 @@ The first part of the project will be spent in defining clearer objective. Then 
 ## Interesting links
 - [Mapping the hometowns of billboard hot 100 artists](http://thedataface.com/mapping-the-hometowns-of-billboard-hot-100-artsts/)
 - [Le bilan des festivals de l'année 2016](http://www.touslesfestivals.com/actualites/le-bilan-des-festivals-de-lannee-2016-121216)
+- [Stats soci-demographiques musique suisse](https://www.bfs.admin.ch/bfs/fr/home/statistiques/culture-medias-societe-information-sport.assetdetail.282381.html)
+- [carte des festivals suisses](https://www.festigo.ch/#!/fr/festimap/all)
