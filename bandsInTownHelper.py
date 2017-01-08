@@ -84,8 +84,8 @@ def getDataBandsInTown (starting_year,ending_year):
                     print('Now processing:',day, '/', month,'/',year, city_request) 
 
                     date_request = getDateRequestParam(day, month, year)
-                    data_json = bandsInTownRequest(base_url, date_request,city_request)
-
+                    data_json = bandsInTownRequest(base_url,date_request,city_request)
+                    
                     try:
                         df_city = fillPandasJson(data_json)
 
@@ -93,7 +93,7 @@ def getDataBandsInTown (starting_year,ending_year):
                     except Exception as inst:
                         print('Servers overloading, waiting a bit...')
                         time.sleep(20)
-                        data_json = bandsInTownRequest(date_request,city_request)
+                        data_json = bandsInTownRequest(base_url,date_request,city_request)
                         df_city = fillPandasJson(data_json)
 
                     #Concatenate the data from this city with the other city for the same month
@@ -109,7 +109,7 @@ def getDataBandsInTown (starting_year,ending_year):
 
             # Save the data for the current month to csv file in a subdirectory
             # Drop useless columns
-            if ['artist_mbid','event_venue.country'] in df.columns:
+            if set(['artist_mbid','event_venue.country']).issubset(df.columns):
             	df.drop(['artist_mbid','event_venue.country'],axis = 1, inplace=True)
             
             folder = 'BandsInTownData'            
