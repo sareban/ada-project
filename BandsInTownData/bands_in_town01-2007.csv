@@ -1,5 +1,5 @@
-artist_name,artist_url,event_venue.longitude,event_url,event_venue.region,event_datetime,event_venue.id,event_venue.url,event_venue.latitude,event_venue.name,event_id,event_venue.city
-Groombridge,http://www.bandsintown.com/Groombridge,7.440461,http://www.bandsintown.com/event/6874983?app_id=epfl,,2007-01-01T23:00:00,1907835,http://www.bandsintown.com/venue/1907835,46.948432, ONO,6874983,Berne
-Painhead,http://www.bandsintown.com/Painhead,9.2833333,http://www.bandsintown.com/event/9916059?app_id=epfl,15,2007-01-06T19:00:00,1579779,http://www.bandsintown.com/venue/1579779,47.5666667,Löwenarena,9916059,Sommeri
-shEver,http://www.bandsintown.com/shEver,8.53438,http://www.bandsintown.com/event/5572030?app_id=epfl,ZH,2007-01-13T19:00:00,1109826,http://www.bandsintown.com/venue/1109826,47.3866196,Werk21,5572030,Zurich
-Heavy Demons,http://www.bandsintown.com/HeavyDemons,7.27255,http://www.bandsintown.com/event/9017695?app_id=epfl,BE,2007-01-27T22:00:00,2020144,http://www.bandsintown.com/venue/2020144,47.14645,Loco Club,9017695,Bienne
+artist_name,artist_url,event_venue.latitude,event_venue.city,event_datetime,event_venue.region,event_venue.id,event_venue.url,event_id,event_venue.name,event_venue.longitude,event_url
+Groombridge,http://www.bandsintown.com/Groombridge,46.948432,Berne,2007-01-01T23:00:00,,1907835,http://www.bandsintown.com/venue/1907835,6874983, ONO,7.440461,http://www.bandsintown.com/event/6874983?app_id=epfl
+Painhead,http://www.bandsintown.com/Painhead,47.5666667,Sommeri,2007-01-06T19:00:00,15,1579779,http://www.bandsintown.com/venue/1579779,9916059,Löwenarena,9.2833333,http://www.bandsintown.com/event/9916059?app_id=epfl
+shEver,http://www.bandsintown.com/shEver,47.3866196,Zurich,2007-01-13T19:00:00,ZH,1109826,http://www.bandsintown.com/venue/1109826,5572030,Werk21,8.53438,http://www.bandsintown.com/event/5572030?app_id=epfl
+Heavy Demons,http://www.bandsintown.com/HeavyDemons,47.14645,Bienne,2007-01-27T22:00:00,BE,2020144,http://www.bandsintown.com/venue/2020144,9017695,Loco Club,7.27255,http://www.bandsintown.com/event/9017695?app_id=epfl
