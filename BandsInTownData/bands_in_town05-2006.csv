@@ -1,0 +1,5 @@
+artist_name,artist_url,event_venue.longitude,event_url,event_venue.region,event_datetime,event_venue.id,event_venue.url,event_venue.latitude,event_venue.name,event_id,event_venue.city
+shEver,http://www.bandsintown.com/shEver,8.8166667,http://www.bandsintown.com/event/5572083?app_id=epfl,25,2006-05-06T19:00:00,1509337,http://www.bandsintown.com/venue/1509337,47.2166667,Lido Bar,5572083,Rapperswil
+Painhead,http://www.bandsintown.com/Painhead,8.65,http://www.bandsintown.com/event/9916083?app_id=epfl,21,2006-05-06T21:00:00,1509341,http://www.bandsintown.com/venue/1509341,46.8833333,laBARacca,9916083,Altdorf
+Groombridge,http://www.bandsintown.com/Groombridge,7.248548,http://www.bandsintown.com/event/6874971?app_id=epfl,,2006-05-12T21:00:00,1907830,http://www.bandsintown.com/venue/1907830,46.855652,Schmitten OpenAir ,6874971,Schmitten (Sense)
+Groombridge,http://www.bandsintown.com/Groombridge,7.440461,http://www.bandsintown.com/event/6874975?app_id=epfl,,2006-05-25T22:00:00,1907832,http://www.bandsintown.com/venue/1907832,46.948432,Subway ,6874975,Berne

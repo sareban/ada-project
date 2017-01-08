@@ -1,0 +1,4 @@
+artist_name,artist_url,event_venue.longitude,event_url,event_venue.region,event_datetime,event_venue.id,event_venue.url,event_venue.latitude,event_venue.name,event_id,event_venue.city
+NORMANDIE,http://www.bandsintown.com/NORMANDIE,8.55,http://www.bandsintown.com/event/6311049?app_id=epfl,25,2006-12-08T19:00:00,1721083,http://www.bandsintown.com/venue/1721083,47.3666667,Rock Highway Contest,6311049,Zurich
+Painhead,http://www.bandsintown.com/Painhead,8.64347,http://www.bandsintown.com/event/9916062?app_id=epfl,21,2006-12-08T21:00:00,2802514,http://www.bandsintown.com/venue/2802514,46.88187,MSA,9916062,Altdorf
+NORMANDIE,http://www.bandsintown.com/NORMANDIE,8.55,http://www.bandsintown.com/event/6311041?app_id=epfl,25,2006-12-22T19:00:00,1721083,http://www.bandsintown.com/venue/1721083,47.3666667,Rock Highway Contest,6311041,Zurich

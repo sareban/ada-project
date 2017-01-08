@@ -1,0 +1,5 @@
+artist_name,artist_url,event_venue.longitude,event_url,event_venue.region,event_datetime,event_venue.id,event_venue.url,event_venue.latitude,event_venue.name,event_id,event_venue.city
+shEver,http://www.bandsintown.com/shEver,8.1099701,http://www.bandsintown.com/event/5572057?app_id=epfl,Switzerland,2006-11-11T19:00:00,39171,http://www.bandsintown.com/venue/39171,47.1725082,Kulturwerk 118,5572057,Sursee
+Mando Diao,http://www.bandsintown.com/MandoDiao,7.151038,http://www.bandsintown.com/event/5838513?app_id=epfl,Etr,2006-11-12T19:00:00,275156,http://www.bandsintown.com/venue/275156,46.79489,Fri-Son,5838513,Fribourg
+Mando Diao,http://www.bandsintown.com/MandoDiao,8.55,http://www.bandsintown.com/event/5838518?app_id=epfl,25,2006-11-14T19:00:00,1584198,http://www.bandsintown.com/venue/1584198,47.3666667,Maag,5838518,Zurich
+shEver,http://www.bandsintown.com/shEver,8.751285,http://www.bandsintown.com/event/5572047?app_id=epfl,Switzerland,2006-11-18T19:00:00,106464,http://www.bandsintown.com/venue/106464,47.34108,Rock City,5572047,Uster

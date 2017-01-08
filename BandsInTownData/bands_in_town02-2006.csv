@@ -1,0 +1,7 @@
+artist_name,artist_url,event_venue.longitude,event_url,event_venue.region,event_datetime,event_venue.id,event_venue.url,event_venue.latitude,event_venue.name,event_id,event_venue.city
+Painhead,http://www.bandsintown.com/Painhead,9.37882,http://www.bandsintown.com/event/9916086?app_id=epfl,SG,2006-02-09T21:00:00,358862,http://www.bandsintown.com/venue/358862,47.42478,Birreria,9916086,St. Gallen
+Painhead,http://www.bandsintown.com/Painhead,9.37369,http://www.bandsintown.com/event/9916090?app_id=epfl,Switzerland,2006-02-18T21:00:00,356220,http://www.bandsintown.com/venue/356220,47.42638,Grabenhalle,9916090,St. Gallen
+shEver,http://www.bandsintown.com/shEver,8.522239,http://www.bandsintown.com/event/5572103?app_id=epfl,Switzerland,2006-02-19T19:00:00,48122,http://www.bandsintown.com/venue/48122,47.362215,Abart,5572103,Zurich
+Groombridge,http://www.bandsintown.com/Groombridge,7.440461,http://www.bandsintown.com/event/6874659?app_id=epfl,,2006-02-24T22:00:00,1907746,http://www.bandsintown.com/venue/1907746,46.948432,Freie Bühne ,6874659,Berne
+Groombridge,http://www.bandsintown.com/Groombridge,7.6245098,http://www.bandsintown.com/event/6874782?app_id=epfl,,2006-02-25T22:00:00,1907781,http://www.bandsintown.com/venue/1907781,47.0548401,Burgundergrund ,6874782,Burgdorf
+shEver,http://www.bandsintown.com/shEver,8.65,http://www.bandsintown.com/event/5572095?app_id=epfl,21,2006-02-25T19:00:00,1509341,http://www.bandsintown.com/venue/1509341,46.8833333,laBARacca,5572095,Altdorf

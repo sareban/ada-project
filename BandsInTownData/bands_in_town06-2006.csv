@@ -1,0 +1,4 @@
+artist_name,artist_url,event_venue.longitude,event_url,event_venue.region,event_datetime,event_venue.id,event_venue.url,event_venue.latitude,event_venue.name,event_id,event_venue.city
+Babylon Circus,http://www.bandsintown.com/BabylonCircus,7.6,http://www.bandsintown.com/event/5473775?app_id=epfl,04,2006-06-03T19:00:00,1479273,http://www.bandsintown.com/venue/1479273,47.5666667,Imaginefestival,5473775,Basel
+Painhead,http://www.bandsintown.com/Painhead,9.25495,http://www.bandsintown.com/event/9916081?app_id=epfl,Switzerland,2006-06-24T21:00:00,2802521,http://www.bandsintown.com/venue/2802521,47.414415,Rockopenair Gossau,9916081,Gossau (Sankt Gallen)
+Mando Diao,http://www.bandsintown.com/MandoDiao,9.37371,http://www.bandsintown.com/event/5838341?app_id=epfl,Switzerland,2006-07-01T19:00:00,900247,http://www.bandsintown.com/venue/900247,47.426392,St. Gallen,5838341,St. Gallen

@@ -1,0 +1,3 @@
+artist_name,artist_url,event_venue.longitude,event_url,event_venue.region,event_datetime,event_venue.id,event_venue.url,event_venue.latitude,event_venue.name,event_id,event_venue.city
+NORMANDIE,http://www.bandsintown.com/NORMANDIE,8.30935,http://www.bandsintown.com/event/6311053?app_id=epfl,LU,2006-04-01T19:00:00,1721087,http://www.bandsintown.com/venue/1721087,47.0484,Ebikon,6311053,Lucerne
+Groombridge,http://www.bandsintown.com/Groombridge,7.440461,http://www.bandsintown.com/event/6874966?app_id=epfl,,2006-04-20T20:00:00,1907828,http://www.bandsintown.com/venue/1907828,46.948432,Berner Beats,6874966,Berne

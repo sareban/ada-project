@@ -1,0 +1,6 @@
+artist_name,artist_url,event_venue.longitude,event_url,event_venue.region,event_datetime,event_venue.id,event_venue.url,event_venue.latitude,event_venue.name,event_id,event_venue.city
+NORMANDIE,http://www.bandsintown.com/NORMANDIE,8.319649,http://www.bandsintown.com/event/6311036?app_id=epfl,Switzerland,2007-02-03T19:00:00,309955,http://www.bandsintown.com/venue/309955,47.04258,Treibhaus,6311036,Lucerne
+NORMANDIE,http://www.bandsintown.com/NORMANDIE,8.3666667,http://www.bandsintown.com/event/6311034?app_id=epfl,11,2007-02-09T19:00:00,1721081,http://www.bandsintown.com/venue/1721081,47.0666667,Adligenswil,6311034,Adligenswil
+DJ Hiddleston,http://www.bandsintown.com/DjHiddleston,8.2833333,http://www.bandsintown.com/event/10210544?app_id=epfl,11,2007-02-09T23:00:00,1549497,http://www.bandsintown.com/venue/1549497,47.0333333,Vegas,10210544,Kriens
+shEver,http://www.bandsintown.com/shEver,7.4403776,http://www.bandsintown.com/event/5572018?app_id=epfl,05,2007-02-23T19:00:00,1509319,http://www.bandsintown.com/venue/1509319,46.9529304,Sous le Pont,5572018,Bern
+shEver,http://www.bandsintown.com/shEver,7.7333333,http://www.bandsintown.com/event/5572009?app_id=epfl,03,2007-02-24T19:00:00,1509318,http://www.bandsintown.com/venue/1509318,47.4666667,Escape Club,5572009,Liestal

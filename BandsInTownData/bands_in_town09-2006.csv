@@ -1,0 +1,3 @@
+artist_name,artist_url,event_venue.longitude,event_url,event_venue.region,event_datetime,event_venue.id,event_venue.url,event_venue.latitude,event_venue.name,event_id,event_venue.city
+Painhead,http://www.bandsintown.com/Painhead,9.37369,http://www.bandsintown.com/event/9916072?app_id=epfl,Switzerland,2006-09-02T16:00:00,2802517,http://www.bandsintown.com/venue/2802517,47.42638,Bahnhofplatz,9916072,St. Gallen
+Heavy Demons,http://www.bandsintown.com/HeavyDemons,9.017415,http://www.bandsintown.com/event/9017692?app_id=epfl,20,2006-09-29T22:00:00,306297,http://www.bandsintown.com/venue/306297,46.193405,Peter Pan,9017692,Bellinzona

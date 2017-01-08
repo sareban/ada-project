@@ -1,0 +1,7 @@
+artist_name,artist_url,event_venue.longitude,event_url,event_venue.region,event_datetime,event_venue.id,event_venue.url,event_venue.latitude,event_venue.name,event_id,event_venue.city
+Negator,http://www.bandsintown.com/Negator,8.5393044,http://www.bandsintown.com/event/6056691?app_id=epfl,,2006-10-12T19:00:00,46886,http://www.bandsintown.com/venue/46886,47.3833038,Dynamo Werk 21,6056691,Zürich
+Sleekstain,http://www.bandsintown.com/Sleekstain,6.20505,http://www.bandsintown.com/event/5720240?app_id=epfl,GE,2006-10-14T19:00:00,1553671,http://www.bandsintown.com/venue/1553671,46.19398,Salle des fêtes,5720240,Thônex
+Groombridge,http://www.bandsintown.com/Groombridge,7.66782,http://www.bandsintown.com/event/6874980?app_id=epfl,,2006-10-17T22:00:00,1907834,http://www.bandsintown.com/venue/1907834,47.1060715,Uhlmannshaus ,6874980,Wynigen
+Ilene Barnes,http://www.bandsintown.com/IleneBarnes,6.618463,http://www.bandsintown.com/event/10508785?app_id=epfl,Etr,2006-10-19T21:30:00,1183013,http://www.bandsintown.com/venue/1183013,46.522243,Les Docks,10508785,Lausanne
+Painhead,http://www.bandsintown.com/Painhead,9.25495,http://www.bandsintown.com/event/9916067?app_id=epfl,Switzerland,2006-10-20T21:00:00,2802515,http://www.bandsintown.com/venue/2802515,47.414415,Kubus,9916067,Gossau (Sankt Gallen)
+shEver,http://www.bandsintown.com/shEver,7.6833333,http://www.bandsintown.com/event/5572064?app_id=epfl,01,2006-10-28T19:00:00,43060,http://www.bandsintown.com/venue/43060,47.5166667,Z7,5572064,Pratteln

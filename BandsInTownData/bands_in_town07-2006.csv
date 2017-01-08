@@ -1,0 +1,6 @@
+artist_name,artist_url,event_venue.longitude,event_url,event_venue.region,event_datetime,event_venue.id,event_venue.url,event_venue.latitude,event_venue.name,event_id,event_venue.city
+Mando Diao,http://www.bandsintown.com/MandoDiao,9.37371,http://www.bandsintown.com/event/5838341?app_id=epfl,Switzerland,2006-07-01T19:00:00,900247,http://www.bandsintown.com/venue/900247,47.426392,St. Gallen,5838341,St. Gallen
+shEver,http://www.bandsintown.com/shEver,8.53438,http://www.bandsintown.com/event/5572076?app_id=epfl,ZH,2006-07-15T19:00:00,1109826,http://www.bandsintown.com/venue/1109826,47.3866196,Werk21,5572076,Zurich
+Babylon Circus,http://www.bandsintown.com/BabylonCircus,7.7333333,http://www.bandsintown.com/event/5474139?app_id=epfl,22,2006-07-18T19:00:00,1479355,http://www.bandsintown.com/venue/1479355,46.3166667,Open Air,5474139,Gampel
+Heavy Demons,http://www.bandsintown.com/HeavyDemons,8.8,http://www.bandsintown.com/event/9017684?app_id=epfl,25,2006-07-22T17:00:00,2529610,http://www.bandsintown.com/venue/2529610,47.55,Bleeding Forest Open Air 2,9017684,Rickenbach
+Babylon Circus,http://www.bandsintown.com/BabylonCircus,6.866213,http://www.bandsintown.com/event/5474121?app_id=epfl,Canton Of Fribourg,2006-07-31T19:00:00,1479343,http://www.bandsintown.com/venue/1479343,46.832733,Estivale,5474121,Vesin

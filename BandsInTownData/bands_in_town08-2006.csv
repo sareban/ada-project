@@ -1,0 +1,6 @@
+artist_name,artist_url,event_venue.longitude,event_url,event_venue.region,event_datetime,event_venue.id,event_venue.url,event_venue.latitude,event_venue.name,event_id,event_venue.city
+Babylon Circus,http://www.bandsintown.com/BabylonCircus,6.14106,http://www.bandsintown.com/event/5474122?app_id=epfl,07,2006-08-02T19:00:00,821856,http://www.bandsintown.com/venue/821856,46.183255,LE CHAT NOIR,5474122,Carouge
+Babylon Circus,http://www.bandsintown.com/BabylonCircus,7.7333333,http://www.bandsintown.com/event/5474149?app_id=epfl,22,2006-08-18T19:00:00,1479355,http://www.bandsintown.com/venue/1479355,46.3166667,Open Air,5474149,Gampel
+Mando Diao,http://www.bandsintown.com/MandoDiao,7.7333333,http://www.bandsintown.com/event/5838373?app_id=epfl,22,2006-08-19T19:00:00,1479355,http://www.bandsintown.com/venue/1479355,46.3166667,Open Air,5838373,Gampel
+Morningwood,http://www.bandsintown.com/Morningwood,7.7276352,http://www.bandsintown.com/event/4889736?app_id=epfl,Wallis,2006-08-19T19:00:00,696312,http://www.bandsintown.com/venue/696312,46.3130614,Open Air Gampel,4889736,Gampel-Bratsch
+Painhead,http://www.bandsintown.com/Painhead,8.55,http://www.bandsintown.com/event/9916077?app_id=epfl,25,2006-08-25T21:00:00,2802520,http://www.bandsintown.com/venue/2802520,47.3666667,Fonda,9916077,Zurich
