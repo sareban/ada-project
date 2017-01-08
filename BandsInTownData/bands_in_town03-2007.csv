@@ -1,5 +1,5 @@
-artist_name,artist_url,event_venue.longitude,event_url,event_venue.region,event_datetime,event_venue.id,event_venue.url,event_venue.latitude,event_venue.name,event_id,event_venue.city
-Much the Same,http://www.bandsintown.com/MuchTheSame,7.5952301,http://www.bandsintown.com/event/10569820?app_id=epfl,BS,2007-03-06T19:00:00,323398,http://www.bandsintown.com/venue/323398,47.5590096,Hirscheneck,10569820,Basel
-The Beauty of Gemina,http://www.bandsintown.com/TheBeautyOfGemina,8.55,http://www.bandsintown.com/event/9361340?app_id=epfl,25,2007-03-16T19:00:00,275159,http://www.bandsintown.com/venue/275159,47.3666667,X-tra,9361340,Zurich
-Groombridge,http://www.bandsintown.com/Groombridge,7.6245098,http://www.bandsintown.com/event/6874985?app_id=epfl,,2007-03-17T22:00:00,1907837,http://www.bandsintown.com/venue/1907837,47.0548401,Alpina,6874985,Burgdorf
-Groombridge,http://www.bandsintown.com/Groombridge,7.4666667,http://www.bandsintown.com/event/6875139?app_id=epfl,05,2007-03-31T21:00:00,1907839,http://www.bandsintown.com/venue/1907839,46.9166667, Sous Soul ,6875139,Berne
+artist_name,artist_url,event_venue.latitude,event_venue.city,event_datetime,event_venue.region,event_venue.id,event_venue.url,event_id,event_venue.name,event_venue.longitude,event_url
+Much the Same,http://www.bandsintown.com/MuchTheSame,47.5590096,Basel,2007-03-06T19:00:00,BS,323398,http://www.bandsintown.com/venue/323398,10569820,Hirscheneck,7.5952301,http://www.bandsintown.com/event/10569820?app_id=epfl
+The Beauty of Gemina,http://www.bandsintown.com/TheBeautyOfGemina,47.3666667,Zurich,2007-03-16T19:00:00,25,275159,http://www.bandsintown.com/venue/275159,9361340,X-tra,8.55,http://www.bandsintown.com/event/9361340?app_id=epfl
+Groombridge,http://www.bandsintown.com/Groombridge,47.0548401,Burgdorf,2007-03-17T22:00:00,,1907837,http://www.bandsintown.com/venue/1907837,6874985,Alpina,7.6245098,http://www.bandsintown.com/event/6874985?app_id=epfl
+Groombridge,http://www.bandsintown.com/Groombridge,46.9166667,Berne,2007-03-31T21:00:00,05,1907839,http://www.bandsintown.com/venue/1907839,6875139, Sous Soul ,7.4666667,http://www.bandsintown.com/event/6875139?app_id=epfl
