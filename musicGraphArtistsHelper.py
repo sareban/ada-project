@@ -142,7 +142,7 @@ def getDataMusicGraph(df):
       
 
         # Store
-        if (i % 10 == 0 and i > 0):
+        if (i % 100 == 0 and i > 0):
             saveDataMusicGraph(df)
         clear_output(wait=True)
 

@@ -22,7 +22,8 @@ def spotifyRequest(base_url, name_request):
     name_request = name_request.replace("#","")
     request_url = base_url + '%22' + name_request + '%22&type=artist'
     data_json = requests.get(request_url).json()
-      
+    #print(request_url)
+     
     return data_json
 
 
@@ -105,9 +106,13 @@ def getDataSpotifyGraph(df):
     # input: dataFrame of artists
     # output : DataFrame containing info about artists
 
-
+    dfout = pd.DataFrame(columns=['genre', 'origin', 'no_result', 'ambigous_result'])
+    loop_cter = 0
+    
     for i, row in df.iterrows():
+        df_artist_data = df.iloc[[i]]
         print(i, '/', len(df))
+        
         # Get information for this artist
         if (row['genre'] is np.nan):
             try:
@@ -118,20 +123,22 @@ def getDataSpotifyGraph(df):
                 df_artist_data = getDataSpotifyArtist(row['name'])
                 
             # Update the DataFrame with new information using the 'name' as the index
-            df.set_index('name', inplace=True)
-            df_artist_data.set_index('name', inplace=True)
-            df.update(df_artist_data)
-            df.reset_index(inplace=True)        
+            df_artist_data['origin'] = row['origin']
+
+        dfout = pd.concat([dfout,df_artist_data])   
 
         # Store
-        if (i % 10 == 0 and i > 0):
-            saveDataSpotify(df)
+        if (i % 50 == 0 and i > 0):
+            saveDataSpotify(dfout,loop_cter)
+            dfout = pd.DataFrame();
+            loop_cter = 1
         clear_output(wait=True)
+        i+=1
 
     return df
 
 
-def saveDataSpotify(df_artists):
+def saveDataSpotify(df_artists, loop_cter):
     # this function saves the dataframe to csv
     # input: dataFrame containing artists data
     # output :/
@@ -139,5 +146,9 @@ def saveDataSpotify(df_artists):
     folder = 'SpotifyData'
     filename = 'total_artists.csv'
     destinationFileName = os.path.join(folder, filename)
-    pd.DataFrame(df_artists, columns=list(df_artists.columns)).to_csv(destinationFileName, index=False, encoding="utf-8")
+    with open(destinationFileName, 'a') as f:
+        if (loop_cter==0):
+            pd.DataFrame(df_artists, columns=list(df_artists.columns)).to_csv(f, index=False, encoding="utf-8", header=True)
+        else:
+            pd.DataFrame(df_artists, columns=list(df_artists.columns)).to_csv(f, index=False, encoding="utf-8", header=False)
     print('file saved')

@@ -32,3 +32,16 @@ def createArtistsDataFrame(filename):
     pd.DataFrame(df, columns=list(df.columns)).to_csv(filename, index=False,encoding="utf-8")
     print('file saved')
     return df
+
+def cleanArtistsDataFrame(filename):
+    
+    df = pd.read_csv(filename)
+                   
+    # Keep only unique artists
+    df.drop_duplicates(inplace=True)
+
+    
+    #Save to csv
+    pd.DataFrame(df, columns=list(df.columns)).to_csv(filename, index=False,encoding="utf-8")
+    print('file saved')
+    return df
