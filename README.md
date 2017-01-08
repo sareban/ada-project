@@ -39,3 +39,4 @@ The first part of the project will be spent in defining clearer objective. Then 
 - [Evolution of genres in the montreux jazz festival](http://kirellbenzi.com/blog/evolution-of-genres-in-the-montreux-jazz-festival/)
 - [Data analysis Montreux Jazz Festival](http://kirellbenzi.com/blog/hello-montreux-jazz-festival/)
 - [Artist Map of Montreux Jazz Festival](http://kirellbenzi.com/blog/montreux-jazz-festival-artists-map/)
+- [Music API in 2016 - all the API related to music](https://www.acrcloud.com/blog/music-apis-the-list-of-2016)
