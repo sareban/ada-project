@@ -19,9 +19,9 @@ def spotifyRequest(base_url, name_request):
     # output : JSON
 
     name_request = name_request.replace (" ", "+")
+    name_request = name_request.replace("#","")
     request_url = base_url + '%22' + name_request + '%22&type=artist'
     data_json = requests.get(request_url).json()
-    print(request_url)
       
     return data_json
 
