@@ -42,6 +42,6 @@ def cleanArtistsDataFrame(filename):
 
     
     #Save to csv
-    pd.DataFrame(df, columns=list(df.columns)).to_csv(filename, index=False,encoding="utf-8")
+    pd.DataFrame(df, columns=list(df.columns)).to_csv(filename, index=False,encoding="utf-8",header = True)
     print('file saved')
     return df
