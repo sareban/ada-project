@@ -14,6 +14,8 @@ import numpy as np
 import csv
 from multiprocessing import Process
 import sys
+import warnings
+warnings.filterwarnings('ignore')
 
 
 def spotifyRequest(base_url, name_request):
@@ -84,7 +86,7 @@ def getDataSpotifyArtist(artist_name):
                     artist_data_genre = elem_json['genres'][0]
                     
     else:
-        raise Exception()
+        raise Exception(1,'Servers overloading, waiting a bit...')
     return artist_data_genre, artist_data_no_result, artist_data_ambigous_result
 
 def splitDataFrames(df):
@@ -99,7 +101,27 @@ def splitDataFrames(df):
     df2 = df.ix[splitting+1:splitting*2]
     df3 = df.ix[splitting*2+1:splitting*3]
     df4 = df.ix[splitting*3+1:last_index]
-    return df1, df2, df3, df4     
+    return df1, df2, df3, df4
+
+def concatDataSpotify():
+    # this function saves the dataframe to csv
+    # input: dataFrame containing artists data
+    # output :/
+    
+    filename = "total_artists_Spotify*.csv"
+    folder = 'SpotifyData'
+    fileAdress = os.path.join(folder, filename)
+    all_files = glob.glob(fileAdress)
+    df = pd.DataFrame()
+    df = pd.concat((pd.read_csv(f) for f in all_files))
+
+    # Drop possible duplicates
+    df.drop_duplicates(inplace=True)
+
+    # Save Again
+    pd.DataFrame(df, columns=list(df.columns)).to_csv('total_artists_Spotify.csv', index=False, encoding="utf-8")
+    print('file saved')
+    return df
 
 def getDataSpotifyGraph(df, df_index):
     # this function gets the genre and origin of all artists using MusicGraph API from a DataFrame and saves to .csv
@@ -107,7 +129,6 @@ def getDataSpotifyGraph(df, df_index):
     # output : DataFrame containing info about artists
     
     start_time = time.time()
-    dfout = pd.DataFrame(columns= ['name', 'origin', 'no_result', 'ambigous_result'])
     loop_cter = 0
     dfout = pd.DataFrame()
    
@@ -120,14 +141,18 @@ def getDataSpotifyGraph(df, df_index):
                                            'no_result': pd.Series(row['no_result']),
                                            'ambigous_result': pd.Series(row['ambigous_result']),
                                            })
-        # Get information for this artist
+        # If genre is missing, get information for this artist
         if (row['genre'] is np.nan):
             try:
                 artist_data_genre, artist_no_result, artist_data_ambigous_result = getDataSpotifyArtist(row['name'])
             except Exception as inst:
-                time.sleep(30)
-                print('Servers overloading, waiting a bit...')
-                artist_data_genre, artist_no_result, artist_data_ambigous_result = getDataSpotifyArtist(row['name'])
+                i, message = inst.args
+                print(message)
+                if i==1:
+                    time.sleep(30)
+                    artist_data_genre, artist_no_result, artist_data_ambigous_result = getDataSpotifyArtist(row['name'])
+                    dfrow = getDataMusicGraphArtist(row,type)
+                else: sys.exit(message)
                 
             # Update the DataFrame with new information
             dfrow['genre'] = artist_data_genre
@@ -153,7 +178,7 @@ def saveDataSpotify(df_artists, loop_cter, df_index):
     # output :/
 
     folder = 'SpotifyData'
-    filename = 'total_artists'+str(df_index)+'.csv'
+    filename = 'total_artists_Spotify'+str(df_index)+'.csv'
     destinationFileName = os.path.join(folder, filename)
     with open(destinationFileName, 'a') as f:
         if (loop_cter==0):
