@@ -57,7 +57,7 @@ def getDataFestigo():
     requestFestigo()
 
     # Read JSON file
-    df = pd.read_json('festival_festigo.json')
+    df = pd.read_json('.\festival_festigo.json')
 
     # Only keep useful columns
     col_to_keep = [
