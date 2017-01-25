@@ -38,7 +38,7 @@ def fillArtistDf(name, genre, origin, no_result, ambigous_result):
                                            })
     return df_artist_data
     
-def getDataMusicGraphArtist(row, type):
+def getDataMusicGraphArtist(row, type_request, api_key):
     
     # this function gets the genre and origin of artists using MusicGraph API.
     # input: artistName
@@ -47,7 +47,7 @@ def getDataMusicGraphArtist(row, type):
     # MusicGraph request
     artist_name = row['name']
     base_url_id = 'http://api.musicgraph.com/api/v2/artist/search?api_key=377a8c2a14bbb912a0e5907822613e14&limit=10'
-    param_request = {'name': artist_name, 'api_key': '377a8c2a14bbb912a0e5907822613e14'}
+    param_request = {'name': artist_name, 'api_key': api_key}
     data_json = musicGraphRequest(base_url_id, param_request)
 
     # Init
@@ -86,19 +86,19 @@ def getDataMusicGraphArtist(row, type):
             else: artist_musicgraph_origin = np.nan
             
             # If the missing information was the genre:
-            if type == 'g':
+            if type_request == 'g':
                 dfrow['genre'] = artist_musicgraph_genre
                 dfrow['no_result'] = 0
                 dfrow['ambigous_result'] = 0
                                            
             # If the missing information was the origin:    
-            elif type == 'o':
+            elif type_request == 'o':
                 dfrow['origin'] = artist_musicgraph_origin
                 dfrow['no_result'] = 0
                 dfrow['ambigous_result'] = 0
                                            
             # If the missing information was the origin AND the genre:    
-            elif type == 'a':
+            elif type_request == 'a':
                 dfrow['origin'] = artist_musicgraph_origin
                 dfrow['genre'] = artist_musicgraph_genre
                 dfrow['no_result'] = 0
@@ -109,7 +109,7 @@ def getDataMusicGraphArtist(row, type):
     return dfrow
 
 
-def getDataMusicGraph(df):
+def getDataMusicGraph(df, api_key):
     # this function gets the genre and origin of all artists using MusicGraph API from a DataFrame and saves to .csv
     # input: dataFrame of artists
     # output : DataFrame containing info about artists
@@ -122,20 +122,21 @@ def getDataMusicGraph(df):
     for i, row in df.iterrows():
         print (i,'/',df.last_valid_index())
         dfrow = fillArtistDf(row['name'],row['genre'],row['origin'],row['no_result'],row['ambigous_result'])
-
-        
+                
         # If genre is missing, get information for this artist
-        if (row['genre'] is np.nan or row['origin'] is np.nan):
-            if (row['genre'] is np.nan):
-                type = 'g'
-            elif (row['origin'] is np.nan):
-                type = 'o'
-            elif (row['genre'] is np.nan and row['origin'] is np.nan):
-                type = 'a'
+        if (row['genre'] is np.nan or row['origin'] is np.nan or 
+           pd.isnull(row['genre']) or  pd.isnull(row['origin'])):
+            if (row['genre'] is np.nan or pd.isnull(row['genre'])):
+                type_request = 'g'
+            elif (row['origin'] is np.nan or  pd.isnull(row['origin'])):
+                type_request = 'o'
+            elif ((row['genre'] is np.nan and row['origin'] is np.nan) or 
+                  pd.isnull(row['genre']) and  pd.isnull(row['origin'])):
+                type_request = 'a'
                 
             try:
                 # Get information for this artist
-                dfrow = getDataMusicGraphArtist(row, type)
+                dfrow = getDataMusicGraphArtist(row, type_request, api_key)
                 
 
             except Exception as inst:
@@ -143,7 +144,7 @@ def getDataMusicGraph(df):
                 print(message)
                 if i==1:
                     time.sleep(30)
-                    dfrow = getDataMusicGraphArtist(row,type)
+                    dfrow = getDataMusicGraphArtist(row,type_request)
                 else: sys.exit(message)
                 
         # Concat
