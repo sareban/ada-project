@@ -18,8 +18,8 @@ def createArtistsDataFrame(filename):
     #Create a file containing all the artists, from a file containing events and artists
     
     df = pd.read_csv(filename)
-    df = df[['artist_name']]
-    df = df.rename(columns={'artist_name': 'name'})
+    df = df[['Artist']]
+    df = df.rename(columns={'Artist': 'name'})
     
     df2 = pd.DataFrame(columns=['genre', 'origin', 'no_result', 'ambigous_result'])
     df = pd.concat([df,df2])
