@@ -191,9 +191,7 @@ def getDataMusicGraph(df, api_key):
                 
         try:
                 # Get information for this artist
-            dfrow = getDataMusicGraphArtist(row, type_request, api_key)
-            print(dfrow)
-                
+            dfrow = getDataMusicGraphArtist(row, type_request, api_key)                
 
         except Exception as inst:
             i, message = inst.args
