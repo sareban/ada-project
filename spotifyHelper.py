@@ -98,9 +98,9 @@ def splitDataFrames(df):
     last_index = df.last_valid_index()
     splitting = last_index/4
     df1 = df.ix[first_index:splitting]
-    df2 = df.ix[splitting+1:splitting*2]
-    df3 = df.ix[splitting*2+1:splitting*3]
-    df4 = df.ix[splitting*3+1:last_index]
+    df2 = df.ix[splitting:splitting*2]
+    df3 = df.ix[splitting*2:splitting*3]
+    df4 = df.ix[splitting*3:last_index]
     return df1, df2, df3, df4
 
 def concatDataSpotify():
@@ -116,7 +116,7 @@ def concatDataSpotify():
     df = pd.concat((pd.read_csv(f) for f in all_files))
 
     # Drop possible duplicates
-    df.drop_duplicates(inplace=True)
+    #df.drop_duplicates(inplace=True)
 
     # Save Again
     pd.DataFrame(df, columns=list(df.columns)).to_csv('total_artists_Spotify.csv', index=False, encoding="utf-8")
@@ -142,7 +142,7 @@ def getDataSpotifyGraph(df, df_index):
                                            'ambigous_result': pd.Series(row['ambigous_result']),
                                            })
         # If genre is missing, get information for this artist
-        if (row['genre'] is np.nan):
+        if (row['genre'] is np.nan or pd.isnull(row['genre'])):
             try:
                 artist_data_genre, artist_no_result, artist_data_ambigous_result = getDataSpotifyArtist(row['name'])
             except Exception as inst:
@@ -151,7 +151,7 @@ def getDataSpotifyGraph(df, df_index):
                 if i==1:
                     time.sleep(30)
                     artist_data_genre, artist_no_result, artist_data_ambigous_result = getDataSpotifyArtist(row['name'])
-                    dfrow = getDataMusicGraphArtist(row,type)
+                    #dfrow = getDataMusicGraphArtist(row,type)
                 else: sys.exit(message)
                 
             # Update the DataFrame with new information
@@ -162,11 +162,14 @@ def getDataSpotifyGraph(df, df_index):
         # Concat
         dfout = pd.concat([dfout,dfrow])
 
-        # Store every 50 artists.
-        if (i % 50 == 0 and i > 0):
-            saveDataSpotify(dfout,loop_cter, df_index)
-            dfout = pd.DataFrame();
-            loop_cter = 1
+        # Store
+        saveDataSpotify(dfout,loop_cter, df_index)
+        dfout = pd.DataFrame();
+        loop_cter = 1
+        
+        if i%10==0:
+            clear_output(wait=True)
+
 
     print("--- %s seconds ---" % (time.time() - start_time))
     #return df
@@ -186,5 +189,25 @@ def saveDataSpotify(df_artists, loop_cter, df_index):
         else:
             pd.DataFrame(df_artists, columns=list(df_artists.columns)).to_csv(f, index=False, encoding="utf-8", header=False)
     print('file saved')
-    clear_output(wait=True)
+
+def concatDataSpotify():
+    # this function saves the dataframe to csv
+    # input: dataFrame containing artists data
+    # output :/
+    
+    filename = "total_artists_Spotify*.csv"
+    folder = 'SpotifyData'
+    fileAdress = os.path.join(folder, filename)
+    all_files = glob.glob(fileAdress)
+    df = pd.DataFrame()
+    df = pd.concat((pd.read_csv(f) for f in all_files))
+
+    #Reset the index
+    df.reset_index(inplace = True,drop = True)
+
+
+    # Save Again
+    pd.DataFrame(df, columns=list(df.columns)).to_csv('total_artists_Spotify.csv', index=False, encoding="utf-8")
+    print('file saved')
+    return df
 
