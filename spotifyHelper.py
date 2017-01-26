@@ -57,25 +57,33 @@ def getDataSpotifyArtist(artist_name):
         # Several artists found with this name
         # We will take only the results where the name of the artists matchs exacty with the given data
         elif (result_count > 1):
+            artist_data_ambigous_result = 1
             #Only select the exact matching name
-            idx = 0
+            idx = []
             counter = 0
             for i,elem_json in enumerate(result_artists_array):
                 if elem_json['name'].lower() == artist_name.lower():
                     # Exact matching, remember index in table of results given in the JSON
                     counter += 1
-                    idx = i
+                    idx.append(i)
                     
             # Number of exact macthing needs to be exactly 1, otherwise it is ambigous
             if counter==1:
+                matching_idx = idx[0]
                 # Find genre 
-                if ('genres' in result_artists_array[idx]):
-                    if (len(result_artists_array[idx]['genres'])>0):
-                        artist_data_genre = result_artists_array[idx]['genres'][0]
+                if ('genres' in result_artists_array[matching_idx]):
+                    if (len(result_artists_array[matching_idx]['genres'])>0):
+                        artist_data_genre = result_artists_array[matching_idx]['genres'][0]
+                        artist_data_ambigous_result = 0
 
-            # Ambigous result
-            else:
-                artist_data_ambigous_result = 1
+            elif counter>1:
+                for matching_idx in idx:
+                    # Find genre 
+                    if ('genres' in result_artists_array[matching_idx]):
+                        if (len(result_artists_array[matching_idx]['genres'])>0):
+                            artist_data_genre = result_artists_array[matching_idx]['genres'][0]
+                            artist_data_ambigous_result = 0
+                            artist_data_no_result = 0
 
         # Unique Artist found with this name
         else:
@@ -188,7 +196,6 @@ def saveDataSpotify(df_artists, loop_cter, df_index):
             pd.DataFrame(df_artists, columns=list(df_artists.columns)).to_csv(f, index=False, encoding="utf-8", header=True)
         else:
             pd.DataFrame(df_artists, columns=list(df_artists.columns)).to_csv(f, index=False, encoding="utf-8", header=False)
-    print('file saved')
 
 def concatDataSpotify():
     # this function saves the dataframe to csv
@@ -208,6 +215,5 @@ def concatDataSpotify():
 
     # Save Again
     pd.DataFrame(df, columns=list(df.columns)).to_csv('total_artists_Spotify.csv', index=False, encoding="utf-8")
-    print('file saved')
     return df
 
