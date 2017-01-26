@@ -22,7 +22,7 @@ def musicGraphRequest(base_url, param_request):
 
     request_url = base_url + '&' + urllib.parse.urlencode(param_request, doseq=True)
     # Wait to respect API limits
-    time.sleep(1)
+    time.sleep(2)
     data_json = requests.get(request_url).json()
     #print(request_url)
 
@@ -162,17 +162,23 @@ def getDataMusicGraphArtist(row, type_request, api_key):
                 dfrow['no_result'] = artist_data_no_result
                 dfrow['ambigous_result'] = 0
     else:
-        raise Exception(1,'Servers overloading, waiting a bit...')
+        if 'status' in data_json:
+            if 'code' in data_json['status']:
+                if data_json['status']['code'] == 3 or data_json['status']['code'] == 1:
+                    raise Exception(3,'API Key expired')
+                else:
+                    raise Exception(1,'Servers overloading')
     
     return dfrow
 
 
-def getDataMusicGraph(df, api_key):
+def getDataMusicGraph(df, df_index, api_key):
     # this function gets the genre and origin of all artists using MusicGraph API from a DataFrame and saves to .csv
     # input: dataFrame of artists
     # output : DataFrame containing info about artists
 
     loop_cter = 0
+    api_key_index = 0
     dfout = pd.DataFrame()
 
 
@@ -191,40 +197,84 @@ def getDataMusicGraph(df, api_key):
                 
         try:
                 # Get information for this artist
-            dfrow = getDataMusicGraphArtist(row, type_request, api_key)                
+            dfrow = getDataMusicGraphArtist(row, type_request, api_key[api_key_index])                
 
         except Exception as inst:
             i, message = inst.args
             print(message)
             if i==1:
+                print('Waiting')
                 time.sleep(30)
-                dfrow = getDataMusicGraphArtist(row,type_request)
-            else: sys.exit(message)
+                dfrow = getDataMusicGraphArtist(row,type_request, api_key[api_key_index])
+            elif i==3:
+                if (api_key_index<len(api_key)-1):
+                    print('Key expired : changing key')
+                    api_key_index+=1
+                    dfrow = getDataMusicGraphArtist(row,type_request, api_key[api_key_index])
+
+            else: 
+                sys.exit(1)
+                
                 
         # Concat
         dfout = pd.concat([dfout,dfrow])
 
         # Store
-        if (i % 10 == 0 and i > 0):
-            saveDataMusicGraph(dfout,loop_cter)
-            loop_cter = 1
-        clear_output(wait=True)
+        saveDataMusicGraph(dfout,loop_cter,df_index)
+        dfout = pd.DataFrame()
+        loop_cter = 1
+        if i%20==0:
+            clear_output(wait=True)
 
     return dfout
 
 
-def saveDataMusicGraph(df_artists,loop_cter):
+def saveDataMusicGraph(df_artists,loop_cter, df_index):
     # this function saves the dataframe to csv
     # input: dataFrame containing artists data
     # output :/
 
     folder = 'MusicGraphArtistsData'
-    filename = 'total_artists_MusicGraph.csv'
+    filename = 'total_artists_MusicGraph'+str(df_index)+'.csv'
     destinationFileName = os.path.join(folder, filename)
     with open(destinationFileName, 'a') as f:
         if (loop_cter==0):
             pd.DataFrame(df_artists, columns=list(df_artists.columns)).to_csv(f, index=False, encoding="utf-8", header=True)
         else:
             pd.DataFrame(df_artists, columns=list(df_artists.columns)).to_csv(f, index=False, encoding="utf-8", header=False)
+    
+def splitDataFrames(df):
+    # This function split the dataframe in 4
+    # input: dataFrame of artists
+    # output : 4 DataFrame containing info about artists
+    
+    first_index = df.first_valid_index()
+    last_index = df.last_valid_index()
+    splitting = last_index/4
+    df1 = df.ix[first_index:splitting]
+    df2 = df.ix[splitting:splitting*2]
+    df3 = df.ix[splitting*2:splitting*3]
+    df4 = df.ix[splitting*3:last_index]
+    return df1, df2, df3, df4
+
+def concatDataMusicGraph():
+    # this function saves the dataframe to csv
+    # input: dataFrame containing artists data
+    # output :/
+    
+    filename = "total_artists_MusicGraph*.csv"
+    folder = 'MusicGraphArtistsData'
+    fileAdress = os.path.join(folder, filename)
+    all_files = glob.glob(fileAdress)
+    df = pd.DataFrame()
+    df = pd.concat((pd.read_csv(f) for f in all_files))
+
+    #Reset the index
+    df.reset_index(inplace = True,drop = True)
+
+
+    # Save Again
+    pd.DataFrame(df, columns=list(df.columns)).to_csv('total_artists_MusicGraph.csv', index=False, encoding="utf-8")
     print('file saved')
-    clear_output(wait=True)
+    return df
+
