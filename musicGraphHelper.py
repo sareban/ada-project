@@ -198,9 +198,9 @@ def getDataMusicGraph(df, df_index, api_key):
             i, message = inst.args
             print(message)
             print('Key expired : changing key')
-            
             if (api_key_index<len(api_key)-1):
                 api_key_index+=1
+
             else: 
                 api_key_index = 0
             dfrow = getDataMusicGraphArtist(row,type_request, api_key[api_key_index])
