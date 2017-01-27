@@ -268,3 +268,25 @@ def concatDataMusicGraph():
     print('file saved')
     return df
 
+def concatSameData(indexFile):
+    # this function concatenates the files df1, df11 etc and saves the dataframe to df1
+    # input: dataFrame containing artists data
+    # output :/
+
+
+    folder = 'MusicGraphArtistsData'
+
+    filename = 'total_artists_MusicGraph'+str(indexFile)+'*.csv'
+    fileAdress = os.path.join(folder, filename)
+    all_files = glob.glob(fileAdress)
+    df = pd.DataFrame()
+    df = pd.concat((pd.read_csv(f) for f in all_files))
+
+    #Reset the index
+    df.reset_index(inplace = True,drop = True)
+
+    # Save Again
+    fileAdress_out = os.path.join(folder, 'total_artists_MusicGraph'+str(indexFile)+'.csv')
+    pd.DataFrame(df, columns=list(df.columns)).to_csv(fileAdress_out, index=False, encoding="utf-8")
+    return df
+

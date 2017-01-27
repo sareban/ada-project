@@ -28,7 +28,7 @@ def spotifyRequest(base_url, name_request):
     name_request = name_request.replace("#","")
     request_url = base_url + '%22' + name_request + '%22&type=artist'
     data_json = requests.get(request_url).json()
-    #print(request_url)
+    print(request_url)
     return data_json
 
 def getDataSpotifyArtist(artist_name):
@@ -111,25 +111,6 @@ def splitDataFrames(df):
     df4 = df.ix[splitting*3:last_index]
     return df1, df2, df3, df4
 
-def concatDataSpotify():
-    # this function saves the dataframe to csv
-    # input: dataFrame containing artists data
-    # output :/
-    
-    filename = "total_artists_Spotify*.csv"
-    folder = 'SpotifyData'
-    fileAdress = os.path.join(folder, filename)
-    all_files = glob.glob(fileAdress)
-    df = pd.DataFrame()
-    df = pd.concat((pd.read_csv(f) for f in all_files))
-
-    # Drop possible duplicates
-    #df.drop_duplicates(inplace=True)
-
-    # Save Again
-    pd.DataFrame(df, columns=list(df.columns)).to_csv('total_artists_Spotify.csv', index=False, encoding="utf-8")
-    print('file saved')
-    return df
 
 def getDataSpotifyGraph(df, df_index):
     # this function gets the genre and origin of all artists using MusicGraph API from a DataFrame and saves to .csv
@@ -156,11 +137,8 @@ def getDataSpotifyGraph(df, df_index):
             except Exception as inst:
                 i, message = inst.args
                 print(message)
-                if i==1:
-                    time.sleep(30)
-                    artist_data_genre, artist_no_result, artist_data_ambigous_result = getDataSpotifyArtist(row['name'])
-                    #dfrow = getDataMusicGraphArtist(row,type)
-                else: sys.exit(message)
+                time.sleep(30)
+                artist_data_genre, artist_no_result, artist_data_ambigous_result = getDataSpotifyArtist(row['name'])
                 
             # Update the DataFrame with new information
             dfrow['genre'] = artist_data_genre
@@ -175,7 +153,7 @@ def getDataSpotifyGraph(df, df_index):
         dfout = pd.DataFrame();
         loop_cter = 1
         
-        if i%10==0:
+        if i%20==0:
             clear_output(wait=True)
 
 
@@ -215,5 +193,27 @@ def concatDataSpotify():
 
     # Save Again
     pd.DataFrame(df, columns=list(df.columns)).to_csv('total_artists_Spotify.csv', index=False, encoding="utf-8")
+    return df
+
+def concatSameData(indexFile):
+    # this function concatenates the files df1, df11 etc and saves the dataframe to df1
+    # input: dataFrame containing artists data
+    # output :/
+
+
+    folder = 'SpotifyData'
+
+    filename = 'total_artists_Spotify'+str(indexFile)+'*.csv'
+    fileAdress = os.path.join(folder, filename)
+    all_files = glob.glob(fileAdress)
+    df = pd.DataFrame()
+    df = pd.concat((pd.read_csv(f) for f in all_files))
+
+    #Reset the index
+    df.reset_index(inplace = True,drop = True)
+
+    # Save Again
+    fileAdress_out = os.path.join(folder, 'total_artists_Spotify'+str(indexFile)+'.csv')
+    pd.DataFrame(df, columns=list(df.columns)).to_csv(fileAdress_out, index=False, encoding="utf-8")
     return df
 
