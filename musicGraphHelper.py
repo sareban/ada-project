@@ -162,13 +162,8 @@ def getDataMusicGraphArtist(row, type_request, api_key):
                 dfrow['no_result'] = artist_data_no_result
                 dfrow['ambigous_result'] = 0
     else:
-        if 'status' in data_json:
-            if 'code' in data_json['status']:
-                if data_json['status']['code'] == 3 or data_json['status']['code'] == 1:
-                    raise Exception(3,'API Key expired')
-                else:
-                    raise Exception(1,'Servers overloading')
-    
+        raise Exception(1,'API Key expired or servers overloading')
+        
     return dfrow
 
 
@@ -202,18 +197,13 @@ def getDataMusicGraph(df, df_index, api_key):
         except Exception as inst:
             i, message = inst.args
             print(message)
-            if i==1:
-                print('Waiting')
-                time.sleep(30)
-                dfrow = getDataMusicGraphArtist(row,type_request, api_key[api_key_index])
-            elif i==3:
-                if (api_key_index<len(api_key)-1):
-                    print('Key expired : changing key')
-                    api_key_index+=1
-                    dfrow = getDataMusicGraphArtist(row,type_request, api_key[api_key_index])
-
+            print('Key expired : changing key')
+            
+            if (api_key_index<len(api_key)-1):
+                api_key_index+=1
             else: 
-                sys.exit(1)
+                api_key_index = 0
+            dfrow = getDataMusicGraphArtist(row,type_request, api_key[api_key_index])
                 
                 
         # Concat
