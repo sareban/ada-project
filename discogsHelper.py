@@ -3,9 +3,7 @@ from difflib import SequenceMatcher
 def similar(name_returned, name):
     return SequenceMatcher(None, name_returned, name).ratio()
 
-def discogs(name):
-    d = discogs_client.Client('ExampleApplication/0.1')
-    d = discogs_client.Client('my_user_agent/0.1', user_token='wlbkELOypkJdzgymfLaoAtjLZtSeNMBLPIvsTIeO')
+def discogs(name,d):
     results=d.search(name, type='artist')
     if (len(results)>0):
         first_result=d.search(name, type='artist')[0]
@@ -23,4 +21,4 @@ def discogs(name):
     else:
         genre='NaN'
         
-    return genre
+    return  first_result
