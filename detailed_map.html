@@ -1,0 +1,2814 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_f9260b999db243c2a9dfd6e4db2a8bc5 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_f9260b999db243c2a9dfd6e4db2a8bc5" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(45, 5);
+            var northEast = L.latLng(48, 11);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_f9260b999db243c2a9dfd6e4db2a8bc5 = L.map('map_f9260b999db243c2a9dfd6e4db2a8bc5', {
+                                           center:[47.3486393164,8.24281265146],
+                                           zoom: 8,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_b2ec499206e6429ab06ea2abb7a537c2 = L.tileLayer(
+                'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 8,
+                    attribution: '(c) <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (c) <a href="http://cartodb.com/attributions">CartoDB</a>, CartoDB <a href ="http://cartodb.com/attributions">attributions</a>',
+                    detectRetina: false
+                    }
+                ).addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+
+        
+        
+            
+
+            var circle_marker_9101fadc45934bb48ec2f14753af02ac = L.circle(
+                [47.369798,8.533634],
+                81.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_07c43196ead74631ae0bc500c5e56380 = L.popup({maxWidth: '300'});
+
+            
+                var html_f1ee6905a4264345aea384da19d56a58 = $('         <div id="html_f1ee6905a4264345aea384da19d56a58"                 style="width: 100.0%; height: 100.0%;">                 2. Akt Restaurant &amp; Bar - 27 artists</div>                 ')[0];
+                popup_07c43196ead74631ae0bc500c5e56380.setContent(html_f1ee6905a4264345aea384da19d56a58);
+            
+
+            circle_marker_9101fadc45934bb48ec2f14753af02ac.bindPopup(popup_07c43196ead74631ae0bc500c5e56380);
+
+            
+        
+        
+            
+
+            var circle_marker_6c1b59794fda4bddb7ff9324a87ec43c = L.circle(
+                [47.391031,8.509772],
+                21.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_3fb964e933fd44dbaaa845ee1fd6e3ad = L.popup({maxWidth: '300'});
+
+            
+                var html_4764516e96d24e52b7f520588551d32e = $('         <div id="html_4764516e96d24e52b7f520588551d32e"                 style="width: 100.0%; height: 100.0%;">                 25 Hours Hotel Zürich - 7 artists</div>                 ')[0];
+                popup_3fb964e933fd44dbaaa845ee1fd6e3ad.setContent(html_4764516e96d24e52b7f520588551d32e);
+            
+
+            circle_marker_6c1b59794fda4bddb7ff9324a87ec43c.bindPopup(popup_3fb964e933fd44dbaaa845ee1fd6e3ad);
+
+            
+        
+        
+            
+
+            var circle_marker_1a5dfae59fed48af8ceb587bf913ff08 = L.circle(
+                [47.373511,8.543929],
+                18.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_bad475ebccd04177bf9228002fc9fdfc = L.popup({maxWidth: '300'});
+
+            
+                var html_2843e9e45f1d44fda41e4b025e2027d9 = $('         <div id="html_2843e9e45f1d44fda41e4b025e2027d9"                 style="width: 100.0%; height: 100.0%;">                 2B Lounge - 6 artists</div>                 ')[0];
+                popup_bad475ebccd04177bf9228002fc9fdfc.setContent(html_2843e9e45f1d44fda41e4b025e2027d9);
+            
+
+            circle_marker_1a5dfae59fed48af8ceb587bf913ff08.bindPopup(popup_bad475ebccd04177bf9228002fc9fdfc);
+
+            
+        
+        
+            
+
+            var circle_marker_b9d4bfcdd85242e59c372f85d2900002 = L.circle(
+                [47.136554,7.248668],
+                39.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_4e31504558b64782b114acff8c32acb8 = L.popup({maxWidth: '300'});
+
+            
+                var html_9a1ae2b686444a74a46af3aa68475e56 = $('         <div id="html_9a1ae2b686444a74a46af3aa68475e56"                 style="width: 100.0%; height: 100.0%;">                 3monkeys - 13 artists</div>                 ')[0];
+                popup_4e31504558b64782b114acff8c32acb8.setContent(html_9a1ae2b686444a74a46af3aa68475e56);
+            
+
+            circle_marker_b9d4bfcdd85242e59c372f85d2900002.bindPopup(popup_4e31504558b64782b114acff8c32acb8);
+
+            
+        
+        
+            
+
+            var circle_marker_7bbd312009f04254b510df62ffbc0eae = L.circle(
+                [47.389506,8.521724],
+                42.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_670b6130e4b543d88d1ad1dc5757a7cc = L.popup({maxWidth: '300'});
+
+            
+                var html_80b9ed473c214c0c8281defa5369f507 = $('         <div id="html_80b9ed473c214c0c8281defa5369f507"                 style="width: 100.0%; height: 100.0%;">                 4. Akt - 14 artists</div>                 ')[0];
+                popup_670b6130e4b543d88d1ad1dc5757a7cc.setContent(html_80b9ed473c214c0c8281defa5369f507);
+            
+
+            circle_marker_7bbd312009f04254b510df62ffbc0eae.bindPopup(popup_670b6130e4b543d88d1ad1dc5757a7cc);
+
+            
+        
+        
+            
+
+            var circle_marker_7778a206fb164220afe8e5d0cc8b14d7 = L.circle(
+                [46.9467,7.456351],
+                60.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_ee44dd581a6348e4b6a32d08074f8519 = L.popup({maxWidth: '300'});
+
+            
+                var html_09e1ee9cf7714e988d360ea4abca2fef = $('         <div id="html_09e1ee9cf7714e988d360ea4abca2fef"                 style="width: 100.0%; height: 100.0%;">                 5ème Etage - 20 artists</div>                 ')[0];
+                popup_ee44dd581a6348e4b6a32d08074f8519.setContent(html_09e1ee9cf7714e988d360ea4abca2fef);
+            
+
+            circle_marker_7778a206fb164220afe8e5d0cc8b14d7.bindPopup(popup_ee44dd581a6348e4b6a32d08074f8519);
+
+            
+        
+        
+            
+
+            var circle_marker_66a609b663634a4f804928df4d75c6c7 = L.circle(
+                [46.519653,6.632273],
+                12.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_84c880b585bf4264a1559f45b7a4b17a = L.popup({maxWidth: '300'});
+
+            
+                var html_cb1b54a65aab4bb2b510e7fb89641fc0 = $('         <div id="html_cb1b54a65aab4bb2b510e7fb89641fc0"                 style="width: 100.0%; height: 100.0%;">                 6 HOURS OF SYMPHONIA - 4 artists</div>                 ')[0];
+                popup_84c880b585bf4264a1559f45b7a4b17a.setContent(html_cb1b54a65aab4bb2b510e7fb89641fc0);
+            
+
+            circle_marker_66a609b663634a4f804928df4d75c6c7.bindPopup(popup_84c880b585bf4264a1559f45b7a4b17a);
+
+            
+        
+        
+            
+
+            var circle_marker_619a170619e845a999b2a10a7d948285 = L.circle(
+                [46.186604,6.127114],
+                39.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_ac4aedaa473d4c3d803ce645fdb2d885 = L.popup({maxWidth: '300'});
+
+            
+                var html_0360ea4b2ff14a1cbcf9ac43c3aa50b7 = $('         <div id="html_0360ea4b2ff14a1cbcf9ac43c3aa50b7"                 style="width: 100.0%; height: 100.0%;">                 ANTIGEL - 13 artists</div>                 ')[0];
+                popup_ac4aedaa473d4c3d803ce645fdb2d885.setContent(html_0360ea4b2ff14a1cbcf9ac43c3aa50b7);
+            
+
+            circle_marker_619a170619e845a999b2a10a7d948285.bindPopup(popup_ac4aedaa473d4c3d803ce645fdb2d885);
+
+            
+        
+        
+            
+
+            var circle_marker_40bf4f9eaad04baa8dc46fbd826545f0 = L.circle(
+                [47.362215,8.522239],
+                1149.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_8e2a957ea94840a590aa634d45691ca0 = L.popup({maxWidth: '300'});
+
+            
+                var html_27428a52c74d4813a5ecea3ce1ffafb8 = $('         <div id="html_27428a52c74d4813a5ecea3ce1ffafb8"                 style="width: 100.0%; height: 100.0%;">                 Abart - 383 artists</div>                 ')[0];
+                popup_8e2a957ea94840a590aa634d45691ca0.setContent(html_27428a52c74d4813a5ecea3ce1ffafb8);
+            
+
+            circle_marker_40bf4f9eaad04baa8dc46fbd826545f0.bindPopup(popup_8e2a957ea94840a590aa634d45691ca0);
+
+            
+        
+        
+            
+
+            var circle_marker_eb767fa2783b493bae7933adaec219b2 = L.circle(
+                [46.519584,6.668837],
+                9.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_4b7750f59bdb41c49acdf2fe546abd80 = L.popup({maxWidth: '300'});
+
+            
+                var html_af2b2335c7e649c3b0ff3194a518d7ae = $('         <div id="html_af2b2335c7e649c3b0ff3194a518d7ae"                 style="width: 100.0%; height: 100.0%;">                 Abraxas - 3 artists</div>                 ')[0];
+                popup_4b7750f59bdb41c49acdf2fe546abd80.setContent(html_af2b2335c7e649c3b0ff3194a518d7ae);
+            
+
+            circle_marker_eb767fa2783b493bae7933adaec219b2.bindPopup(popup_4b7750f59bdb41c49acdf2fe546abd80);
+
+            
+        
+        
+            
+
+            var circle_marker_37f0504a07814aea847cc13a3354682d = L.circle(
+                [47.37675,8.529151],
+                1101.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_c14d4065183f42c5b0da7b834547fb3c = L.popup({maxWidth: '300'});
+
+            
+                var html_b9ace137447d405a8b33812c86fe11f5 = $('         <div id="html_b9ace137447d405a8b33812c86fe11f5"                 style="width: 100.0%; height: 100.0%;">                 Alte Kaserne - 367 artists</div>                 ')[0];
+                popup_c14d4065183f42c5b0da7b834547fb3c.setContent(html_b9ace137447d405a8b33812c86fe11f5);
+            
+
+            circle_marker_37f0504a07814aea847cc13a3354682d.bindPopup(popup_c14d4065183f42c5b0da7b834547fb3c);
+
+            
+        
+        
+            
+
+            var circle_marker_1e5c9f78a6a644e7b954711edd7b5011 = L.circle(
+                [46.808359,7.156221],
+                45.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_a7468c2cd863495da7c09955dfc41cde = L.popup({maxWidth: '300'});
+
+            
+                var html_3208141889a546c2ada7c0b44bf5c499 = $('         <div id="html_3208141889a546c2ada7c0b44bf5c499"                 style="width: 100.0%; height: 100.0%;">                 BELLUARD BOLLWERK INTERNATIONAL - 15 artists</div>                 ')[0];
+                popup_a7468c2cd863495da7c09955dfc41cde.setContent(html_3208141889a546c2ada7c0b44bf5c499);
+            
+
+            circle_marker_1e5c9f78a6a644e7b954711edd7b5011.bindPopup(popup_a7468c2cd863495da7c09955dfc41cde);
+
+            
+        
+        
+            
+
+            var circle_marker_8d0ebcda5c464db9b35180d8e9748fdf = L.circle(
+                [46.306476,7.528884],
+                15.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_0979383b7dc241d3a8aee79130f0f771 = L.popup({maxWidth: '300'});
+
+            
+                var html_a81b8604cd6a43189e93eb765d45c851 = $('         <div id="html_a81b8604cd6a43189e93eb765d45c851"                 style="width: 100.0%; height: 100.0%;">                 BOURASK FESTIVAL - 5 artists</div>                 ')[0];
+                popup_0979383b7dc241d3a8aee79130f0f771.setContent(html_a81b8604cd6a43189e93eb765d45c851);
+            
+
+            circle_marker_8d0ebcda5c464db9b35180d8e9748fdf.bindPopup(popup_0979383b7dc241d3a8aee79130f0f771);
+
+            
+        
+        
+            
+
+            var circle_marker_d7e0abf804b0484f8a72c057f3b709f1 = L.circle(
+                [46.861574,7.180178],
+                1596.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_5748662df2884668a02d73e07ee767b5 = L.popup({maxWidth: '300'});
+
+            
+                var html_62db9c0bc4c049c4bdf9b55fcd8644ff = $('         <div id="html_62db9c0bc4c049c4bdf9b55fcd8644ff"                 style="width: 100.0%; height: 100.0%;">                 Bad Bonn - 532 artists</div>                 ')[0];
+                popup_5748662df2884668a02d73e07ee767b5.setContent(html_62db9c0bc4c049c4bdf9b55fcd8644ff);
+            
+
+            circle_marker_d7e0abf804b0484f8a72c057f3b709f1.bindPopup(popup_5748662df2884668a02d73e07ee767b5);
+
+            
+        
+        
+            
+
+            var circle_marker_dab35784f2a04511bee3adb174558d34 = L.circle(
+                [47.552363,7.587572],
+                150.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_0574ef4d121e4447a37b6f6e9a9c1da6 = L.popup({maxWidth: '300'});
+
+            
+                var html_eef951e475cf44d18bd2ea100182db32 = $('         <div id="html_eef951e475cf44d18bd2ea100182db32"                 style="width: 100.0%; height: 100.0%;">                 Balz - 50 artists</div>                 ')[0];
+                popup_0574ef4d121e4447a37b6f6e9a9c1da6.setContent(html_eef951e475cf44d18bd2ea100182db32);
+            
+
+            circle_marker_dab35784f2a04511bee3adb174558d34.bindPopup(popup_0574ef4d121e4447a37b6f6e9a9c1da6);
+
+            
+        
+        
+            
+
+            var circle_marker_c093b98705d2459c888f20bb7de0edf0 = L.circle(
+                [47.04187,8.310957],
+                627.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_9f3fb237d8f140df83909f7f0c3a2e4b = L.popup({maxWidth: '300'});
+
+            
+                var html_61c29390c8cb404b877bda8db68882fa = $('         <div id="html_61c29390c8cb404b877bda8db68882fa"                 style="width: 100.0%; height: 100.0%;">                 Bar 59 - 209 artists</div>                 ')[0];
+                popup_9f3fb237d8f140df83909f7f0c3a2e4b.setContent(html_61c29390c8cb404b877bda8db68882fa);
+            
+
+            circle_marker_c093b98705d2459c888f20bb7de0edf0.bindPopup(popup_9f3fb237d8f140df83909f7f0c3a2e4b);
+
+            
+        
+        
+            
+
+            var circle_marker_4cbde073791b4ec99200aaee49560240 = L.circle(
+                [46.311883,7.543267],
+                45.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_086c98cd30eb465191aaf7dba545775b = L.popup({maxWidth: '300'});
+
+            
+                var html_a6a859b22ef04d3b9ef390e95f8c84bc = $('         <div id="html_a6a859b22ef04d3b9ef390e95f8c84bc"                 style="width: 100.0%; height: 100.0%;">                 CAPRICES - 15 artists</div>                 ')[0];
+                popup_086c98cd30eb465191aaf7dba545775b.setContent(html_a6a859b22ef04d3b9ef390e95f8c84bc);
+            
+
+            circle_marker_4cbde073791b4ec99200aaee49560240.bindPopup(popup_086c98cd30eb465191aaf7dba545775b);
+
+            
+        
+        
+            
+
+            var circle_marker_251f154b54a24b4f872016d63502ddf4 = L.circle(
+                [46.35959,6.217162],
+                18.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_91df85a084e94d498dc332caea364c68 = L.popup({maxWidth: '300'});
+
+            
+                var html_0842aaed89534a588e81628d5edc9bd2 = $('         <div id="html_0842aaed89534a588e81628d5edc9bd2"                 style="width: 100.0%; height: 100.0%;">                 CARIBANA - 6 artists</div>                 ')[0];
+                popup_91df85a084e94d498dc332caea364c68.setContent(html_0842aaed89534a588e81628d5edc9bd2);
+            
+
+            circle_marker_251f154b54a24b4f872016d63502ddf4.bindPopup(popup_91df85a084e94d498dc332caea364c68);
+
+            
+        
+        
+            
+
+            var circle_marker_fcf65c309dfd486c9e612506c47ee316 = L.circle(
+                [47.382198,8.534527],
+                183.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_d087edd316cb4aca89d4b4e07ae9e94c = L.popup({maxWidth: '300'});
+
+            
+                var html_841e8bfcc1104d5eb0299d571c18c4ba = $('         <div id="html_841e8bfcc1104d5eb0299d571c18c4ba"                 style="width: 100.0%; height: 100.0%;">                 Club Flamingo - 61 artists</div>                 ')[0];
+                popup_d087edd316cb4aca89d4b4e07ae9e94c.setContent(html_841e8bfcc1104d5eb0299d571c18c4ba);
+            
+
+            circle_marker_fcf65c309dfd486c9e612506c47ee316.bindPopup(popup_d087edd316cb4aca89d4b4e07ae9e94c);
+
+            
+        
+        
+            
+
+            var circle_marker_e09f10b152cf4411ae6dd13e7a238509 = L.circle(
+                [47.366667,8.55],
+                3.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_2d2fc0ec5b42495fbf5c6c464e0cdffd = L.popup({maxWidth: '300'});
+
+            
+                var html_bebb1486fc544e6fa78e3767b10e908a = $('         <div id="html_bebb1486fc544e6fa78e3767b10e908a"                 style="width: 100.0%; height: 100.0%;">                 Club HEY! - 1 artists</div>                 ')[0];
+                popup_2d2fc0ec5b42495fbf5c6c464e0cdffd.setContent(html_bebb1486fc544e6fa78e3767b10e908a);
+            
+
+            circle_marker_e09f10b152cf4411ae6dd13e7a238509.bindPopup(popup_2d2fc0ec5b42495fbf5c6c464e0cdffd);
+
+            
+        
+        
+            
+
+            var circle_marker_00c0279c9ad14447a5269834ee44032e = L.circle(
+                [46.947566,7.447976],
+                129.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_cb0c1722272f4de8b73578039d953252 = L.popup({maxWidth: '300'});
+
+            
+                var html_0e4b75be47c5420784f60f26096ba5ce = $('         <div id="html_0e4b75be47c5420784f60f26096ba5ce"                 style="width: 100.0%; height: 100.0%;">                 Du Théâtre - 43 artists</div>                 ')[0];
+                popup_cb0c1722272f4de8b73578039d953252.setContent(html_0e4b75be47c5420784f60f26096ba5ce);
+            
+
+            circle_marker_00c0279c9ad14447a5269834ee44032e.bindPopup(popup_cb0c1722272f4de8b73578039d953252);
+
+            
+        
+        
+            
+
+            var circle_marker_7cebab84e4204205b692b912af092423 = L.circle(
+                [47.376313,8.54767],
+                30.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_7c038a7c3e6b49519a5e45f66974268b = L.popup({maxWidth: '300'});
+
+            
+                var html_17e8ee7808d1475b80a782efe52605cc = $('         <div id="html_17e8ee7808d1475b80a782efe52605cc"                 style="width: 100.0%; height: 100.0%;">                 ETH Semper-Aula - 10 artists</div>                 ')[0];
+                popup_7c038a7c3e6b49519a5e45f66974268b.setContent(html_17e8ee7808d1475b80a782efe52605cc);
+            
+
+            circle_marker_7cebab84e4204205b692b912af092423.bindPopup(popup_7c038a7c3e6b49519a5e45f66974268b);
+
+            
+        
+        
+            
+
+            var circle_marker_f04a4e167d8e45d0a72853425ba260ea = L.circle(
+                [47.561045,8.894008],
+                339.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_b6d5fe7b945e492b8bf5aa908fee9dee = L.popup({maxWidth: '300'});
+
+            
+                var html_b3b03d62aa654312a70ac49925e5a09f = $('         <div id="html_b3b03d62aa654312a70ac49925e5a09f"                 style="width: 100.0%; height: 100.0%;">                 Eisenwerk - 113 artists</div>                 ')[0];
+                popup_b6d5fe7b945e492b8bf5aa908fee9dee.setContent(html_b3b03d62aa654312a70ac49925e5a09f);
+            
+
+            circle_marker_f04a4e167d8e45d0a72853425ba260ea.bindPopup(popup_b6d5fe7b945e492b8bf5aa908fee9dee);
+
+            
+        
+        
+            
+
+            var circle_marker_336c49b3730643b29e11220faf8a3b06 = L.circle(
+                [47.495655,8.74848],
+                150.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_022432c122d348188fe554022a49a764 = L.popup({maxWidth: '300'});
+
+            
+                var html_719d7bf8817d4a829f160cb5e4ab1d6e = $('         <div id="html_719d7bf8817d4a829f160cb5e4ab1d6e"                 style="width: 100.0%; height: 100.0%;">                 Eishalle Duetwag - 50 artists</div>                 ')[0];
+                popup_022432c122d348188fe554022a49a764.setContent(html_719d7bf8817d4a829f160cb5e4ab1d6e);
+            
+
+            circle_marker_336c49b3730643b29e11220faf8a3b06.bindPopup(popup_022432c122d348188fe554022a49a764);
+
+            
+        
+        
+            
+
+            var circle_marker_77278e8367184d06ac24fa98fb2fccdb = L.circle(
+                [46.758704,7.629686],
+                6.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_8168d51480964b0ca25a4b8a4ba91053 = L.popup({maxWidth: '300'});
+
+            
+                var html_9c4fc9ef96714ee7badba4101aff0507 = $('         <div id="html_9c4fc9ef96714ee7badba4101aff0507"                 style="width: 100.0%; height: 100.0%;">                 El Camino - 2 artists</div>                 ')[0];
+                popup_8168d51480964b0ca25a4b8a4ba91053.setContent(html_9c4fc9ef96714ee7badba4101aff0507);
+            
+
+            circle_marker_77278e8367184d06ac24fa98fb2fccdb.bindPopup(popup_8168d51480964b0ca25a4b8a4ba91053);
+
+            
+        
+        
+            
+
+            var circle_marker_a3c43f77784745108be66beccfb16e15 = L.circle(
+                [47.389976,8.521285],
+                249.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_c27ee08e2f4c487f99fa053e60a400e8 = L.popup({maxWidth: '300'});
+
+            
+                var html_eabc3bb5a1204ada9583e2e74f9096b8 = $('         <div id="html_eabc3bb5a1204ada9583e2e74f9096b8"                 style="width: 100.0%; height: 100.0%;">                 Escherwyss - 83 artists</div>                 ')[0];
+                popup_c27ee08e2f4c487f99fa053e60a400e8.setContent(html_eabc3bb5a1204ada9583e2e74f9096b8);
+            
+
+            circle_marker_a3c43f77784745108be66beccfb16e15.bindPopup(popup_c27ee08e2f4c487f99fa053e60a400e8);
+
+            
+        
+        
+            
+
+            var circle_marker_e2c3b501553f4ff2a45322b2f0f6dc5d = L.circle(
+                [47.502149,8.724357],
+                381.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_3f91ff4d814640bf8962604720184b84 = L.popup({maxWidth: '300'});
+
+            
+                var html_0fd8fa12b9de47fe9ea33ad4bd31a7b0 = $('         <div id="html_0fd8fa12b9de47fe9ea33ad4bd31a7b0"                 style="width: 100.0%; height: 100.0%;">                 Esse Musicbar - 127 artists</div>                 ')[0];
+                popup_3f91ff4d814640bf8962604720184b84.setContent(html_0fd8fa12b9de47fe9ea33ad4bd31a7b0);
+            
+
+            circle_marker_e2c3b501553f4ff2a45322b2f0f6dc5d.bindPopup(popup_3f91ff4d814640bf8962604720184b84);
+
+            
+        
+        
+            
+
+            var circle_marker_bb00f6d5e63f4a92b08ac3f7ded51a09 = L.circle(
+                [46.31601,8.49372],
+                153.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_e09fba8a1650444684479283cc946cac = L.popup({maxWidth: '300'});
+
+            
+                var html_6432d8fb1842412b8d7beb7fcbd4de0e = $('         <div id="html_6432d8fb1842412b8d7beb7fcbd4de0e"                 style="width: 100.0%; height: 100.0%;">                 Festival - 51 artists</div>                 ')[0];
+                popup_e09fba8a1650444684479283cc946cac.setContent(html_6432d8fb1842412b8d7beb7fcbd4de0e);
+            
+
+            circle_marker_bb00f6d5e63f4a92b08ac3f7ded51a09.bindPopup(popup_e09fba8a1650444684479283cc946cac);
+
+            
+        
+        
+            
+
+            var circle_marker_1289e955705f49c5906261117c1f038c = L.circle(
+                [47.494565,8.707746],
+                1188.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_fa2ceeb224484c2891a9d3fb7c6c6169 = L.popup({maxWidth: '300'});
+
+            
+                var html_d80983b63303472892a716ca9074c392 = $('         <div id="html_d80983b63303472892a716ca9074c392"                 style="width: 100.0%; height: 100.0%;">                 Gaswerk - 396 artists</div>                 ')[0];
+                popup_fa2ceeb224484c2891a9d3fb7c6c6169.setContent(html_d80983b63303472892a716ca9074c392);
+            
+
+            circle_marker_1289e955705f49c5906261117c1f038c.bindPopup(popup_fa2ceeb224484c2891a9d3fb7c6c6169);
+
+            
+        
+        
+            
+
+            var circle_marker_5d6abf0d980446b185d2bbef0c150c8f = L.circle(
+                [47.05,7.616667],
+                3.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_80be511464f64e2e86c22cab21d97513 = L.popup({maxWidth: '300'});
+
+            
+                var html_5ec54663c8e84c4d882bd9ffbd874e87 = $('         <div id="html_5ec54663c8e84c4d882bd9ffbd874e87"                 style="width: 100.0%; height: 100.0%;">                 Gymfest - 1 artists</div>                 ')[0];
+                popup_80be511464f64e2e86c22cab21d97513.setContent(html_5ec54663c8e84c4d882bd9ffbd874e87);
+            
+
+            circle_marker_5d6abf0d980446b185d2bbef0c150c8f.bindPopup(popup_80be511464f64e2e86c22cab21d97513);
+
+            
+        
+        
+            
+
+            var circle_marker_f33f1850213f476889797a6f7a3f9585 = L.circle(
+                [47.477928,9.49519],
+                6.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_2fc1c342802f455597c231116c366530 = L.popup({maxWidth: '300'});
+
+            
+                var html_b220ec75ea70432fba420de7a92ce215 = $('         <div id="html_b220ec75ea70432fba420de7a92ce215"                 style="width: 100.0%; height: 100.0%;">                 Hafenbuffet - 2 artists</div>                 ')[0];
+                popup_2fc1c342802f455597c231116c366530.setContent(html_b220ec75ea70432fba420de7a92ce215);
+            
+
+            circle_marker_f33f1850213f476889797a6f7a3f9585.bindPopup(popup_2fc1c342802f455597c231116c366530);
+
+            
+        
+        
+            
+
+            var circle_marker_0737ce6e9fbc46b2a4ee5f39bce9157e = L.circle(
+                [47.366667,8.55],
+                579.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_b7d1a932d79f4b03898eea00b4745e3b = L.popup({maxWidth: '300'});
+
+            
+                var html_bcd3a5cc75484610ba4ad9277e9181f1 = $('         <div id="html_bcd3a5cc75484610ba4ad9277e9181f1"                 style="width: 100.0%; height: 100.0%;">                 Hafenkneipe - 193 artists</div>                 ')[0];
+                popup_b7d1a932d79f4b03898eea00b4745e3b.setContent(html_bcd3a5cc75484610ba4ad9277e9181f1);
+            
+
+            circle_marker_0737ce6e9fbc46b2a4ee5f39bce9157e.bindPopup(popup_b7d1a932d79f4b03898eea00b4745e3b);
+
+            
+        
+        
+            
+
+            var circle_marker_ca5fc8ab80f04d81a77bfea49d7bbc21 = L.circle(
+                [47.410675,8.552307],
+                2520.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_449c6b98ab8944ada154ba78ad7394d8 = L.popup({maxWidth: '300'});
+
+            
+                var html_8c0ce967067948b88703cb925ef379fd = $('         <div id="html_8c0ce967067948b88703cb925ef379fd"                 style="width: 100.0%; height: 100.0%;">                 Hallenstadion - 840 artists</div>                 ')[0];
+                popup_449c6b98ab8944ada154ba78ad7394d8.setContent(html_8c0ce967067948b88703cb925ef379fd);
+            
+
+            circle_marker_ca5fc8ab80f04d81a77bfea49d7bbc21.bindPopup(popup_449c6b98ab8944ada154ba78ad7394d8);
+
+            
+        
+        
+            
+
+            var circle_marker_1bcdbbcb196348edafc5efbe55e58952 = L.circle(
+                [47.55901,7.59523],
+                474.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_85999b096fdc4f21af335472082fe271 = L.popup({maxWidth: '300'});
+
+            
+                var html_647d1deb75ad4b0eadeaa5b7a7dd5b1c = $('         <div id="html_647d1deb75ad4b0eadeaa5b7a7dd5b1c"                 style="width: 100.0%; height: 100.0%;">                 Hirscheneck - 158 artists</div>                 ')[0];
+                popup_85999b096fdc4f21af335472082fe271.setContent(html_647d1deb75ad4b0eadeaa5b7a7dd5b1c);
+            
+
+            circle_marker_1bcdbbcb196348edafc5efbe55e58952.bindPopup(popup_85999b096fdc4f21af335472082fe271);
+
+            
+        
+        
+            
+
+            var circle_marker_6840e6e12dae488ca691464d35bf818c = L.circle(
+                [46.953439,7.440005],
+                327.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_518de106584b4eee80ca6abb46aa8136 = L.popup({maxWidth: '300'});
+
+            
+                var html_0b369f2371854139a865fadc17640f6a = $('         <div id="html_0b369f2371854139a865fadc17640f6a"                 style="width: 100.0%; height: 100.0%;">                 ISC Club - 109 artists</div>                 ')[0];
+                popup_518de106584b4eee80ca6abb46aa8136.setContent(html_0b369f2371854139a865fadc17640f6a);
+            
+
+            circle_marker_6840e6e12dae488ca691464d35bf818c.bindPopup(popup_518de106584b4eee80ca6abb46aa8136);
+
+            
+        
+        
+            
+
+            var circle_marker_e2d7b269316b4be0b5bc660d39c3e50a = L.circle(
+                [46.833333,8.416667],
+                3.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_c896b3c6b9704c9a87dc8669afda3931 = L.popup({maxWidth: '300'});
+
+            
+                var html_a3a0d9e8849f4a16bf841ad006fce51b = $('         <div id="html_a3a0d9e8849f4a16bf841ad006fce51b"                 style="width: 100.0%; height: 100.0%;">                 Igludorf Engelberg - 1 artists</div>                 ')[0];
+                popup_c896b3c6b9704c9a87dc8669afda3931.setContent(html_a3a0d9e8849f4a16bf841ad006fce51b);
+            
+
+            circle_marker_e2d7b269316b4be0b5bc660d39c3e50a.bindPopup(popup_c896b3c6b9704c9a87dc8669afda3931);
+
+            
+        
+        
+            
+
+            var circle_marker_0073f82895fd4a8e95435e2de1d625ab = L.circle(
+                [47.18222,8.52076],
+                216.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_63aeee7e92c54c169db404165d31446f = L.popup({maxWidth: '300'});
+
+            
+                var html_826579022e8940eb89adda9130b9198d = $('         <div id="html_826579022e8940eb89adda9130b9198d"                 style="width: 100.0%; height: 100.0%;">                 Industrie 45 - 72 artists</div>                 ')[0];
+                popup_63aeee7e92c54c169db404165d31446f.setContent(html_826579022e8940eb89adda9130b9198d);
+            
+
+            circle_marker_0073f82895fd4a8e95435e2de1d625ab.bindPopup(popup_63aeee7e92c54c169db404165d31446f);
+
+            
+        
+        
+            
+
+            var circle_marker_9e33b2bf5da141f9abf1f5bdb58a3cd3 = L.circle(
+                [47.050429,8.312062],
+                1161.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_cbb115e0d8994dfeb0991088e8b2ef52 = L.popup({maxWidth: '300'});
+
+            
+                var html_5f25a353b3034919a17627891adbc9a6 = $('         <div id="html_5f25a353b3034919a17627891adbc9a6"                 style="width: 100.0%; height: 100.0%;">                 KKL - 387 artists</div>                 ')[0];
+                popup_cbb115e0d8994dfeb0991088e8b2ef52.setContent(html_5f25a353b3034919a17627891adbc9a6);
+            
+
+            circle_marker_9e33b2bf5da141f9abf1f5bdb58a3cd3.bindPopup(popup_cbb115e0d8994dfeb0991088e8b2ef52);
+
+            
+        
+        
+            
+
+            var circle_marker_1379bec106d442d8b20115556a4d60c3 = L.circle(
+                [47.375488,8.526468],
+                330.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_8aaafaf3068c44b6b5c7df0ad0aab9b7 = L.popup({maxWidth: '300'});
+
+            
+                var html_f0a50084db754ce2815667731ee0e3d0 = $('         <div id="html_f0a50084db754ce2815667731ee0e3d0"                 style="width: 100.0%; height: 100.0%;">                 Kanzlei - 110 artists</div>                 ')[0];
+                popup_8aaafaf3068c44b6b5c7df0ad0aab9b7.setContent(html_f0a50084db754ce2815667731ee0e3d0);
+            
+
+            circle_marker_1379bec106d442d8b20115556a4d60c3.bindPopup(popup_8aaafaf3068c44b6b5c7df0ad0aab9b7);
+
+            
+        
+        
+            
+
+            var circle_marker_90e89f4b044b47368bc73df2baeb7347 = L.circle(
+                [47.563589,7.590517],
+                1914.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_7feff79aa9274b17b53f9ecd72d06923 = L.popup({maxWidth: '300'});
+
+            
+                var html_d6feea0f606743e189c0ab65685799dc = $('         <div id="html_d6feea0f606743e189c0ab65685799dc"                 style="width: 100.0%; height: 100.0%;">                 Kaserne - 638 artists</div>                 ')[0];
+                popup_7feff79aa9274b17b53f9ecd72d06923.setContent(html_d6feea0f606743e189c0ab65685799dc);
+            
+
+            circle_marker_90e89f4b044b47368bc73df2baeb7347.bindPopup(popup_7feff79aa9274b17b53f9ecd72d06923);
+
+            
+        
+        
+            
+
+            var circle_marker_37250e4eff62485c80b101936aefe795 = L.circle(
+                [47.371722,8.536468],
+                3324.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_69187942a8c047bf83df20f86a054652 = L.popup({maxWidth: '300'});
+
+            
+                var html_f700fe753e584fe4b5bde78fdb06ed5e = $('         <div id="html_f700fe753e584fe4b5bde78fdb06ed5e"                 style="width: 100.0%; height: 100.0%;">                 Kaufleuten - 1108 artists</div>                 ')[0];
+                popup_69187942a8c047bf83df20f86a054652.setContent(html_f700fe753e584fe4b5bde78fdb06ed5e);
+            
+
+            circle_marker_37250e4eff62485c80b101936aefe795.bindPopup(popup_69187942a8c047bf83df20f86a054652);
+
+            
+        
+        
+            
+
+            var circle_marker_8e58f7c4924a4af6b903782728606e7d = L.circle(
+                [47.371544,8.550486],
+                30.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_74c48560b8424592a8f5ace83911f778 = L.popup({maxWidth: '300'});
+
+            
+                var html_b35ab11c9da94459b04642f0155fc331 = $('         <div id="html_b35ab11c9da94459b04642f0155fc331"                 style="width: 100.0%; height: 100.0%;">                 Keller 62 - 10 artists</div>                 ')[0];
+                popup_74c48560b8424592a8f5ace83911f778.setContent(html_b35ab11c9da94459b04642f0155fc331);
+            
+
+            circle_marker_8e58f7c4924a4af6b903782728606e7d.bindPopup(popup_74c48560b8424592a8f5ace83911f778);
+
+            
+        
+        
+            
+
+            var circle_marker_2fbc623cc45e492bbcbd4ed1326c24ff = L.circle(
+                [47.398713,8.063906],
+                255.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_1d6170f6d3fe480792dc8d6dbe19be5b = L.popup({maxWidth: '300'});
+
+            
+                var html_a5e11bb8c9a046c8bdc658355ab2ab81 = $('         <div id="html_a5e11bb8c9a046c8bdc658355ab2ab81"                 style="width: 100.0%; height: 100.0%;">                 KiFF - 85 artists</div>                 ')[0];
+                popup_1d6170f6d3fe480792dc8d6dbe19be5b.setContent(html_a5e11bb8c9a046c8bdc658355ab2ab81);
+            
+
+            circle_marker_2fbc623cc45e492bbcbd4ed1326c24ff.bindPopup(popup_1d6170f6d3fe480792dc8d6dbe19be5b);
+
+            
+        
+        
+            
+
+            var circle_marker_216c445d44fe492c9c796de06382cb56 = L.circle(
+                [47.494777,8.717944],
+                558.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_ea3322964727428ca1b3adb41d35297b = L.popup({maxWidth: '300'});
+
+            
+                var html_3bdfbf6aca0a4bd3b25089f7610c6695 = $('         <div id="html_3bdfbf6aca0a4bd3b25089f7610c6695"                 style="width: 100.0%; height: 100.0%;">                 Kraftfeld - 186 artists</div>                 ')[0];
+                popup_ea3322964727428ca1b3adb41d35297b.setContent(html_3bdfbf6aca0a4bd3b25089f7610c6695);
+            
+
+            circle_marker_216c445d44fe492c9c796de06382cb56.bindPopup(popup_ea3322964727428ca1b3adb41d35297b);
+
+            
+        
+        
+            
+
+            var circle_marker_7369291776f448929b03567cfd48ca46 = L.circle(
+                [47.206739,7.537573],
+                36.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_bfb0964211ee4d1a86f8d95338a7d132 = L.popup({maxWidth: '300'});
+
+            
+                var html_4a665322a920420b8c25f5462b452698 = $('         <div id="html_4a665322a920420b8c25f5462b452698"                 style="width: 100.0%; height: 100.0%;">                 KreuzKultur - 12 artists</div>                 ')[0];
+                popup_bfb0964211ee4d1a86f8d95338a7d132.setContent(html_4a665322a920420b8c25f5462b452698);
+            
+
+            circle_marker_7369291776f448929b03567cfd48ca46.bindPopup(popup_bfb0964211ee4d1a86f8d95338a7d132);
+
+            
+        
+        
+            
+
+            var circle_marker_3330a6e25159495791511938cf985b6b = L.circle(
+                [47.393906,8.045007],
+                78.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_f6e991856b9e4003a65d4596a0975c82 = L.popup({maxWidth: '300'});
+
+            
+                var html_f4fb9ef4731c4e93b43d0ffef53e0f1b = $('         <div id="html_f4fb9ef4731c4e93b43d0ffef53e0f1b"                 style="width: 100.0%; height: 100.0%;">                 Kultur &amp; Kongresshaus - 26 artists</div>                 ')[0];
+                popup_f6e991856b9e4003a65d4596a0975c82.setContent(html_f4fb9ef4731c4e93b43d0ffef53e0f1b);
+            
+
+            circle_marker_3330a6e25159495791511938cf985b6b.bindPopup(popup_f6e991856b9e4003a65d4596a0975c82);
+
+            
+        
+        
+            
+
+            var circle_marker_c66741318e8642a69f032e723ecf97bf = L.circle(
+                [46.946891,7.448707],
+                219.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_b034852589424c408aaee269eddd89c2 = L.popup({maxWidth: '300'});
+
+            
+                var html_a5c9b126348746579256fa1d14fa0529 = $('         <div id="html_a5c9b126348746579256fa1d14fa0529"                 style="width: 100.0%; height: 100.0%;">                 Kultur-Casino - 73 artists</div>                 ')[0];
+                popup_b034852589424c408aaee269eddd89c2.setContent(html_a5c9b126348746579256fa1d14fa0529);
+            
+
+            circle_marker_c66741318e8642a69f032e723ecf97bf.bindPopup(popup_b034852589424c408aaee269eddd89c2);
+
+            
+        
+        
+            
+
+            var circle_marker_1dc6abb65fbd4711aa07017ef57c79ae = L.circle(
+                [47.377826,8.53065],
+                159.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_ec66d5297353479581464f9d46accd45 = L.popup({maxWidth: '300'});
+
+            
+                var html_89b2c57f5af34c438dfa6e4d616a845e = $('         <div id="html_89b2c57f5af34c438dfa6e4d616a845e"                 style="width: 100.0%; height: 100.0%;">                 Kunstraum Walcheturm - 53 artists</div>                 ')[0];
+                popup_ec66d5297353479581464f9d46accd45.setContent(html_89b2c57f5af34c438dfa6e4d616a845e);
+            
+
+            circle_marker_1dc6abb65fbd4711aa07017ef57c79ae.bindPopup(popup_ec66d5297353479581464f9d46accd45);
+
+            
+        
+        
+            
+
+            var circle_marker_d32f6e133ea54f88a59cc8063ff43c7a = L.circle(
+                [47.188679,8.39609],
+                3.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_13c0ef3120f24cc0ba6750f4e820d3bc = L.popup({maxWidth: '300'});
+
+            
+                var html_0b0bf2316d6a48efa6f0cfa7e989af69 = $('         <div id="html_0b0bf2316d6a48efa6f0cfa7e989af69"                 style="width: 100.0%; height: 100.0%;">                 LA CHIMERE - 1 artists</div>                 ')[0];
+                popup_13c0ef3120f24cc0ba6750f4e820d3bc.setContent(html_0b0bf2316d6a48efa6f0cfa7e989af69);
+            
+
+            circle_marker_d32f6e133ea54f88a59cc8063ff43c7a.bindPopup(popup_13c0ef3120f24cc0ba6750f4e820d3bc);
+
+            
+        
+        
+            
+
+            var circle_marker_9768f0b45ac94ec0b8821d6a42c3072b = L.circle(
+                [47.366667,8.55],
+                9.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_c72af8773b2b482f9768fd5ab0073067 = L.popup({maxWidth: '300'});
+
+            
+                var html_fb2a544859024c5083b0bf4a0a2463b7 = $('         <div id="html_fb2a544859024c5083b0bf4a0a2463b7"                 style="width: 100.0%; height: 100.0%;">                 Labor Bar - 3 artists</div>                 ')[0];
+                popup_c72af8773b2b482f9768fd5ab0073067.setContent(html_fb2a544859024c5083b0bf4a0a2463b7);
+            
+
+            circle_marker_9768f0b45ac94ec0b8821d6a42c3072b.bindPopup(popup_c72af8773b2b482f9768fd5ab0073067);
+
+            
+        
+        
+            
+
+            var circle_marker_b13d797b6cc144f2bb3cdff7e158d339 = L.circle(
+                [47.353853,8.554943],
+                150.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_627575e657fa4fcbbe2fd0652af73b7b = L.popup({maxWidth: '300'});
+
+            
+                var html_ff8482193f5047399bc9b6676408b05f = $('         <div id="html_ff8482193f5047399bc9b6676408b05f"                 style="width: 100.0%; height: 100.0%;">                 Lebewohlfabrik - 50 artists</div>                 ')[0];
+                popup_627575e657fa4fcbbe2fd0652af73b7b.setContent(html_ff8482193f5047399bc9b6676408b05f);
+            
+
+            circle_marker_b13d797b6cc144f2bb3cdff7e158d339.bindPopup(popup_627575e657fa4fcbbe2fd0652af73b7b);
+
+            
+        
+        
+            
+
+            var circle_marker_d0f87a73e15243d6a72bc3d4f288addd = L.circle(
+                [47.14645,7.27255],
+                12.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_95ccfca291b6413487f1fa0507971a2c = L.popup({maxWidth: '300'});
+
+            
+                var html_61c632f6d6274452b6b87e80aea72956 = $('         <div id="html_61c632f6d6274452b6b87e80aea72956"                 style="width: 100.0%; height: 100.0%;">                 Loco Club - 4 artists</div>                 ')[0];
+                popup_95ccfca291b6413487f1fa0507971a2c.setContent(html_61c632f6d6274452b6b87e80aea72956);
+            
+
+            circle_marker_d0f87a73e15243d6a72bc3d4f288addd.bindPopup(popup_95ccfca291b6413487f1fa0507971a2c);
+
+            
+        
+        
+            
+
+            var circle_marker_9d52c2376a3c4502849215f4828dc210 = L.circle(
+                [47.566667,9.283333],
+                9.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_f44d90a3638f48c68a6aac950ae978dc = L.popup({maxWidth: '300'});
+
+            
+                var html_ecd7e4e2c77943f2b68c546bbe55589e = $('         <div id="html_ecd7e4e2c77943f2b68c546bbe55589e"                 style="width: 100.0%; height: 100.0%;">                 Löwenarena - 3 artists</div>                 ')[0];
+                popup_f44d90a3638f48c68a6aac950ae978dc.setContent(html_ecd7e4e2c77943f2b68c546bbe55589e);
+            
+
+            circle_marker_9d52c2376a3c4502849215f4828dc210.bindPopup(popup_f44d90a3638f48c68a6aac950ae978dc);
+
+            
+        
+        
+            
+
+            var circle_marker_b04961f1886540558b5f661dadde8e3e = L.circle(
+                [46.883334,7.383338],
+                3.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_219f5c4d32a242a897902ee618571d47 = L.popup({maxWidth: '300'});
+
+            
+                var html_218985842baa4b22b1e50db4cb3288af = $('         <div id="html_218985842baa4b22b1e50db4cb3288af"                 style="width: 100.0%; height: 100.0%;">                 MZH Oberscherli - 1 artists</div>                 ')[0];
+                popup_219f5c4d32a242a897902ee618571d47.setContent(html_218985842baa4b22b1e50db4cb3288af);
+            
+
+            circle_marker_b04961f1886540558b5f661dadde8e3e.bindPopup(popup_219f5c4d32a242a897902ee618571d47);
+
+            
+        
+        
+            
+
+            var circle_marker_410b0ca6cef240f3ae66561364fd5b21 = L.circle(
+                [47.051753,8.298259],
+                348.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_dd78b962c62845bf868d8cad6828e930 = L.popup({maxWidth: '300'});
+
+            
+                var html_91ec4f173ea34981a883d20558f89e42 = $('         <div id="html_91ec4f173ea34981a883d20558f89e42"                 style="width: 100.0%; height: 100.0%;">                 Madeleine - 116 artists</div>                 ')[0];
+                popup_dd78b962c62845bf868d8cad6828e930.setContent(html_91ec4f173ea34981a883d20558f89e42);
+            
+
+            circle_marker_410b0ca6cef240f3ae66561364fd5b21.bindPopup(popup_dd78b962c62845bf868d8cad6828e930);
+
+            
+        
+        
+            
+
+            var circle_marker_5971c49cb2504342a0594e3e4f683e56 = L.circle(
+                [46.948903,7.459359],
+                324.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_c83b47dd2e124a8a924507614e5418b8 = L.popup({maxWidth: '300'});
+
+            
+                var html_bdea47041dad4fc8899eddcbb5e3e984 = $('         <div id="html_bdea47041dad4fc8899eddcbb5e3e984"                 style="width: 100.0%; height: 100.0%;">                 Mahogany Hall - 108 artists</div>                 ')[0];
+                popup_c83b47dd2e124a8a924507614e5418b8.setContent(html_bdea47041dad4fc8899eddcbb5e3e984);
+            
+
+            circle_marker_5971c49cb2504342a0594e3e4f683e56.bindPopup(popup_c83b47dd2e124a8a924507614e5418b8);
+
+            
+        
+        
+            
+
+            var circle_marker_ededc264e7e74259bb40d8c274bd0337 = L.circle(
+                [46.96103,7.43941],
+                657.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_e47be9ee14eb4252963d102305460e58 = L.popup({maxWidth: '300'});
+
+            
+                var html_cec5327ee6b1433a8482977385c4c605 = $('         <div id="html_cec5327ee6b1433a8482977385c4c605"                 style="width: 100.0%; height: 100.0%;">                 Marians JazzRoom - 219 artists</div>                 ')[0];
+                popup_e47be9ee14eb4252963d102305460e58.setContent(html_cec5327ee6b1433a8482977385c4c605);
+            
+
+            circle_marker_ededc264e7e74259bb40d8c274bd0337.bindPopup(popup_e47be9ee14eb4252963d102305460e58);
+
+            
+        
+        
+            
+
+            var circle_marker_8c85c57e2ae84745b402f6c00da9eadc = L.circle(
+                [46.916667,7.466667],
+                75.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_a1f59bfb16144cdbadd87fce1e39455e = L.popup({maxWidth: '300'});
+
+            
+                var html_ceaa704af9604a848ee3f3a7fe03a896 = $('         <div id="html_ceaa704af9604a848ee3f3a7fe03a896"                 style="width: 100.0%; height: 100.0%;">                 Marion&#39;s Jazzroom - 25 artists</div>                 ')[0];
+                popup_a1f59bfb16144cdbadd87fce1e39455e.setContent(html_ceaa704af9604a848ee3f3a7fe03a896);
+            
+
+            circle_marker_8c85c57e2ae84745b402f6c00da9eadc.bindPopup(popup_a1f59bfb16144cdbadd87fce1e39455e);
+
+            
+        
+        
+            
+
+            var circle_marker_d43d48e150234691be109858b300069b = L.circle(
+                [47.380457,8.527006],
+                12.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_a6e905be74d4480582002dd3b85fd79e = L.popup({maxWidth: '300'});
+
+            
+                var html_c74c1537133747e6991404f05755e4e9 = $('         <div id="html_c74c1537133747e6991404f05755e4e9"                 style="width: 100.0%; height: 100.0%;">                 Mars Bar - 4 artists</div>                 ')[0];
+                popup_a6e905be74d4480582002dd3b85fd79e.setContent(html_c74c1537133747e6991404f05755e4e9);
+            
+
+            circle_marker_d43d48e150234691be109858b300069b.bindPopup(popup_a6e905be74d4480582002dd3b85fd79e);
+
+            
+        
+        
+            
+
+            var circle_marker_f87d8ca1b1c54e64920f849f29c8b469 = L.circle(
+                [47.558855,7.588534],
+                321.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_5378e6a362e247a48e078cb1f18e2ec4 = L.popup({maxWidth: '300'});
+
+            
+                var html_64a78b7c372140d1b18c5c2fc32a6dd3 = $('         <div id="html_64a78b7c372140d1b18c5c2fc32a6dd3"                 style="width: 100.0%; height: 100.0%;">                 Martinskirche - 107 artists</div>                 ')[0];
+                popup_5378e6a362e247a48e078cb1f18e2ec4.setContent(html_64a78b7c372140d1b18c5c2fc32a6dd3);
+            
+
+            circle_marker_f87d8ca1b1c54e64920f849f29c8b469.bindPopup(popup_5378e6a362e247a48e078cb1f18e2ec4);
+
+            
+        
+        
+            
+
+            var circle_marker_bf5439baeefa46dbaaf0a419b5eca46e = L.circle(
+                [47.366376,8.546773],
+                1296.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_9c91abd2df2e4bb88e1f53de3a1de8d3 = L.popup({maxWidth: '300'});
+
+            
+                var html_195f358bb485442e87fef24c096b3792 = $('         <div id="html_195f358bb485442e87fef24c096b3792"                 style="width: 100.0%; height: 100.0%;">                 Mascotte - 432 artists</div>                 ')[0];
+                popup_9c91abd2df2e4bb88e1f53de3a1de8d3.setContent(html_195f358bb485442e87fef24c096b3792);
+            
+
+            circle_marker_bf5439baeefa46dbaaf0a419b5eca46e.bindPopup(popup_9c91abd2df2e4bb88e1f53de3a1de8d3);
+
+            
+        
+        
+            
+
+            var circle_marker_b4ba388afb5342feb77821de000d3f71 = L.circle(
+                [47.388826,8.518921],
+                5988.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_2408215d82d7479d9872c07e91747347 = L.popup({maxWidth: '300'});
+
+            
+                var html_c15ced65a0c64a13a5ee4ce8c1426e94 = $('         <div id="html_c15ced65a0c64a13a5ee4ce8c1426e94"                 style="width: 100.0%; height: 100.0%;">                 Moods - 1996 artists</div>                 ')[0];
+                popup_2408215d82d7479d9872c07e91747347.setContent(html_c15ced65a0c64a13a5ee4ce8c1426e94);
+            
+
+            circle_marker_b4ba388afb5342feb77821de000d3f71.bindPopup(popup_2408215d82d7479d9872c07e91747347);
+
+            
+        
+        
+            
+
+            var circle_marker_51acab364d1d4ff1ba8a6e0c6e5d64d3 = L.circle(
+                [47.32019,7.899079],
+                90.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_9f0da7ffc6f242dc813b227d813ee9dd = L.popup({maxWidth: '300'});
+
+            
+                var html_6cc1f70da1c740c6abe6115cc8d0e3bc = $('         <div id="html_6cc1f70da1c740c6abe6115cc8d0e3bc"                 style="width: 100.0%; height: 100.0%;">                 Moonwalker - 30 artists</div>                 ')[0];
+                popup_9f0da7ffc6f242dc813b227d813ee9dd.setContent(html_6cc1f70da1c740c6abe6115cc8d0e3bc);
+            
+
+            circle_marker_51acab364d1d4ff1ba8a6e0c6e5d64d3.bindPopup(popup_9f0da7ffc6f242dc813b227d813ee9dd);
+
+            
+        
+        
+            
+
+            var circle_marker_c1ebbfc4afb94923a12c4a96b8c81082 = L.circle(
+                [47.408944,8.550586],
+                216.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_73beac83f5984884b7ffc43c60651f17 = L.popup({maxWidth: '300'});
+
+            
+                var html_1e13df8ca70e43168f997a6444bc304e = $('         <div id="html_1e13df8ca70e43168f997a6444bc304e"                 style="width: 100.0%; height: 100.0%;">                 Mundwerk - 72 artists</div>                 ')[0];
+                popup_73beac83f5984884b7ffc43c60651f17.setContent(html_1e13df8ca70e43168f997a6444bc304e);
+            
+
+            circle_marker_c1ebbfc4afb94923a12c4a96b8c81082.bindPopup(popup_73beac83f5984884b7ffc43c60651f17);
+
+            
+        
+        
+            
+
+            var circle_marker_673ae50eea144c1ab4d93e0a55e4f423 = L.circle(
+                [47.192288,7.395891],
+                45.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_0d65618c9423485787f2e7d9054a8695 = L.popup({maxWidth: '300'});
+
+            
+                var html_ed69dfc2924741798e0f45e2b5045d13 = $('         <div id="html_ed69dfc2924741798e0f45e2b5045d13"                 style="width: 100.0%; height: 100.0%;">                 Musigbar - 15 artists</div>                 ')[0];
+                popup_0d65618c9423485787f2e7d9054a8695.setContent(html_ed69dfc2924741798e0f45e2b5045d13);
+            
+
+            circle_marker_673ae50eea144c1ab4d93e0a55e4f423.bindPopup(popup_0d65618c9423485787f2e7d9054a8695);
+
+            
+        
+        
+            
+
+            var circle_marker_5bc8c3a5821843d2a31f3a4a6ff4b3d7 = L.circle(
+                [46.433333,6.916667],
+                45.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_6c68139e25784e80a1b678b275ee9d37 = L.popup({maxWidth: '300'});
+
+            
+                var html_f59e774904334952957700d6a87481ae = $('         <div id="html_f59e774904334952957700d6a87481ae"                 style="width: 100.0%; height: 100.0%;">                 Ned - 15 artists</div>                 ')[0];
+                popup_6c68139e25784e80a1b678b275ee9d37.setContent(html_f59e774904334952957700d6a87481ae);
+            
+
+            circle_marker_5bc8c3a5821843d2a31f3a4a6ff4b3d7.bindPopup(popup_6c68139e25784e80a1b678b275ee9d37);
+
+            
+        
+        
+            
+
+            var circle_marker_5728f9915278492aa047621195f4b8d8 = L.circle(
+                [46.948432,7.440461],
+                144.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_e2e6f9e35ece4771a22d11d8029b1d5c = L.popup({maxWidth: '300'});
+
+            
+                var html_ad61a7d6fcf249e8a82903c97773bc65 = $('         <div id="html_ad61a7d6fcf249e8a82903c97773bc65"                 style="width: 100.0%; height: 100.0%;">                 ONO - 48 artists</div>                 ')[0];
+                popup_e2e6f9e35ece4771a22d11d8029b1d5c.setContent(html_ad61a7d6fcf249e8a82903c97773bc65);
+            
+
+            circle_marker_5728f9915278492aa047621195f4b8d8.bindPopup(popup_e2e6f9e35ece4771a22d11d8029b1d5c);
+
+            
+        
+        
+            
+
+            var circle_marker_35771db5c0074b16a251aec40a086b1e = L.circle(
+                [47.412958,8.558865],
+                219.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_719e6545ad9040869703b4d1c1db0023 = L.popup({maxWidth: '300'});
+
+            
+                var html_64aece8b2e0540e28a7637a047fb1613 = $('         <div id="html_64aece8b2e0540e28a7637a047fb1613"                 style="width: 100.0%; height: 100.0%;">                 OXA - 73 artists</div>                 ')[0];
+                popup_719e6545ad9040869703b4d1c1db0023.setContent(html_64aece8b2e0540e28a7637a047fb1613);
+            
+
+            circle_marker_35771db5c0074b16a251aec40a086b1e.bindPopup(popup_719e6545ad9040869703b4d1c1db0023);
+
+            
+        
+        
+            
+
+            var circle_marker_60bd077924e341ddbee03a381aa2494d = L.circle(
+                [47.557627,7.570921],
+                27.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_4601ea72714e4bd798e4c55eed3023a3 = L.popup({maxWidth: '300'});
+
+            
+                var html_137df48500d14f6f997a05be81037b2e = $('         <div id="html_137df48500d14f6f997a05be81037b2e"                 style="width: 100.0%; height: 100.0%;">                 Oekolampad - 9 artists</div>                 ')[0];
+                popup_4601ea72714e4bd798e4c55eed3023a3.setContent(html_137df48500d14f6f997a05be81037b2e);
+            
+
+            circle_marker_60bd077924e341ddbee03a381aa2494d.bindPopup(popup_4601ea72714e4bd798e4c55eed3023a3);
+
+            
+        
+        
+            
+
+            var circle_marker_b6363b318ff74d4f80ff6eba5aa53b28 = L.circle(
+                [46.94815,7.451965],
+                288.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_fb346e06cfdf494d93e1e4cc5dfd7c95 = L.popup({maxWidth: '300'});
+
+            
+                var html_681d2b70bb2741dabd796e897fc7165e = $('         <div id="html_681d2b70bb2741dabd796e897fc7165e"                 style="width: 100.0%; height: 100.0%;">                 Ono - Das Kulturlokal - 96 artists</div>                 ')[0];
+                popup_fb346e06cfdf494d93e1e4cc5dfd7c95.setContent(html_681d2b70bb2741dabd796e897fc7165e);
+            
+
+            circle_marker_b6363b318ff74d4f80ff6eba5aa53b28.bindPopup(popup_fb346e06cfdf494d93e1e4cc5dfd7c95);
+
+            
+        
+        
+            
+
+            var circle_marker_d6c5588350f545d2b1568b1e26e94617 = L.circle(
+                [46.944128,7.435911],
+                33.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_f2b8688ca6a54710a15bb1557ddc4149 = L.popup({maxWidth: '300'});
+
+            
+                var html_154402c233204d9397a64ffa50541723 = $('         <div id="html_154402c233204d9397a64ffa50541723"                 style="width: 100.0%; height: 100.0%;">                 Orbital Garden - 11 artists</div>                 ')[0];
+                popup_f2b8688ca6a54710a15bb1557ddc4149.setContent(html_154402c233204d9397a64ffa50541723);
+            
+
+            circle_marker_d6c5588350f545d2b1568b1e26e94617.bindPopup(popup_f2b8688ca6a54710a15bb1557ddc4149);
+
+            
+        
+        
+            
+
+            var circle_marker_9ede5351c93040cf838058065be18d1a = L.circle(
+                [46.8,9.25],
+                3.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_982c475f6f604333832666451223fe20 = L.popup({maxWidth: '300'});
+
+            
+                var html_92e11eff98c94493926b0dba9818b5ee = $('         <div id="html_92e11eff98c94493926b0dba9818b5ee"                 style="width: 100.0%; height: 100.0%;">                 PALACE CLUB AT RIDERS PALACE - 1 artists</div>                 ')[0];
+                popup_982c475f6f604333832666451223fe20.setContent(html_92e11eff98c94493926b0dba9818b5ee);
+            
+
+            circle_marker_9ede5351c93040cf838058065be18d1a.bindPopup(popup_982c475f6f604333832666451223fe20);
+
+            
+        
+        
+            
+
+            var circle_marker_9c7f314082a9432e94214071b0d1558f = L.circle(
+                [46.0,8.966667],
+                27.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_b5a65e9aed1a49c2bc8e63de7be4b078 = L.popup({maxWidth: '300'});
+
+            
+                var html_6a8cfec31deb44aaa4fda5ed7ab5f957 = $('         <div id="html_6a8cfec31deb44aaa4fda5ed7ab5f957"                 style="width: 100.0%; height: 100.0%;">                 Padiglione Conza - 9 artists</div>                 ')[0];
+                popup_b5a65e9aed1a49c2bc8e63de7be4b078.setContent(html_6a8cfec31deb44aaa4fda5ed7ab5f957);
+            
+
+            circle_marker_9c7f314082a9432e94214071b0d1558f.bindPopup(popup_b5a65e9aed1a49c2bc8e63de7be4b078);
+
+            
+        
+        
+            
+
+            var circle_marker_98fc099acc034c3bb4efb6bd8c9118fe = L.circle(
+                [47.426617,9.37317],
+                594.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_40b4360000254b8aa258d088bcf1e796 = L.popup({maxWidth: '300'});
+
+            
+                var html_9cedfa3752984f4ebfbd0380a921e569 = $('         <div id="html_9cedfa3752984f4ebfbd0380a921e569"                 style="width: 100.0%; height: 100.0%;">                 Palace - 198 artists</div>                 ')[0];
+                popup_40b4360000254b8aa258d088bcf1e796.setContent(html_9cedfa3752984f4ebfbd0380a921e569);
+            
+
+            circle_marker_98fc099acc034c3bb4efb6bd8c9118fe.bindPopup(popup_40b4360000254b8aa258d088bcf1e796);
+
+            
+        
+        
+            
+
+            var circle_marker_0ad0a884c9ed4ed1a02583848d3215bf = L.circle(
+                [47.563828,7.591143],
+                156.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_e9aeff6e8d674e7b86a62a2eda93e680 = L.popup({maxWidth: '300'});
+
+            
+                var html_8c6ef2d781be4be4bcaf85f661043037 = $('         <div id="html_8c6ef2d781be4be4bcaf85f661043037"                 style="width: 100.0%; height: 100.0%;">                 Parterre One - 52 artists</div>                 ')[0];
+                popup_e9aeff6e8d674e7b86a62a2eda93e680.setContent(html_8c6ef2d781be4be4bcaf85f661043037);
+            
+
+            circle_marker_0ad0a884c9ed4ed1a02583848d3215bf.bindPopup(popup_e9aeff6e8d674e7b86a62a2eda93e680);
+
+            
+        
+        
+            
+
+            var circle_marker_70221e5e26324c37959d76ee037c8187 = L.circle(
+                [47.384697,8.533926],
+                84.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_2a7c2c50c40b4e6c873068331bbf7177 = L.popup({maxWidth: '300'});
+
+            
+                var html_a2243f657a3948e7bf016f0399c87714 = $('         <div id="html_a2243f657a3948e7bf016f0399c87714"                 style="width: 100.0%; height: 100.0%;">                 Photobastei - 28 artists</div>                 ')[0];
+                popup_2a7c2c50c40b4e6c873068331bbf7177.setContent(html_a2243f657a3948e7bf016f0399c87714);
+            
+
+            circle_marker_70221e5e26324c37959d76ee037c8187.bindPopup(popup_2a7c2c50c40b4e6c873068331bbf7177);
+
+            
+        
+        
+            
+
+            var circle_marker_e45b0bca926d4ae8bd43a831ea22a0c0 = L.circle(
+                [46.852598,9.217776],
+                138.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_61092f9ae7cb4fbb91bc738922acdc0b = L.popup({maxWidth: '300'});
+
+            
+                var html_2b01c1f1e2d441baa8d95830499ca76b = $('         <div id="html_2b01c1f1e2d441baa8d95830499ca76b"                 style="width: 100.0%; height: 100.0%;">                 Riders Palace - 46 artists</div>                 ')[0];
+                popup_61092f9ae7cb4fbb91bc738922acdc0b.setContent(html_2b01c1f1e2d441baa8d95830499ca76b);
+            
+
+            circle_marker_e45b0bca926d4ae8bd43a831ea22a0c0.bindPopup(popup_61092f9ae7cb4fbb91bc738922acdc0b);
+
+            
+        
+        
+            
+
+            var circle_marker_77cb0b4071c74b029206166b2cddcc65 = L.circle(
+                [47.21206,7.789998],
+                3.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_5073c9f34b6a4fc4b8003964d5ed4dc2 = L.popup({maxWidth: '300'});
+
+            
+                var html_c840b76fa2b24bac86d614622e01ac53 = $('         <div id="html_c840b76fa2b24bac86d614622e01ac53"                 style="width: 100.0%; height: 100.0%;">                 Rock in Church - 1 artists</div>                 ')[0];
+                popup_5073c9f34b6a4fc4b8003964d5ed4dc2.setContent(html_c840b76fa2b24bac86d614622e01ac53);
+            
+
+            circle_marker_77cb0b4071c74b029206166b2cddcc65.bindPopup(popup_5073c9f34b6a4fc4b8003964d5ed4dc2);
+
+            
+        
+        
+            
+
+            var circle_marker_cc52af5eea414d6ca5b37cbf530af1c8 = L.circle(
+                [47.508556,7.616218],
+                36.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_cbe7ea0f12ca43658f2a4447c1576369 = L.popup({maxWidth: '300'});
+
+            
+                var html_8ede37b9f6ca46a4b66fc73335502388 = $('         <div id="html_8ede37b9f6ca46a4b66fc73335502388"                 style="width: 100.0%; height: 100.0%;">                 Rockfact Music Club - 12 artists</div>                 ')[0];
+                popup_cbe7ea0f12ca43658f2a4447c1576369.setContent(html_8ede37b9f6ca46a4b66fc73335502388);
+            
+
+            circle_marker_cc52af5eea414d6ca5b37cbf530af1c8.bindPopup(popup_cbe7ea0f12ca43658f2a4447c1576369);
+
+            
+        
+        
+            
+
+            var circle_marker_2ead7134d2554b24a1c8bafa2ebf80bd = L.circle(
+                [47.366667,8.55],
+                168.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_b3e1c7b9a95c4de6bd938d9502346e08 = L.popup({maxWidth: '300'});
+
+            
+                var html_472bf739114240a0938c27f58b742baf = $('         <div id="html_472bf739114240a0938c27f58b742baf"                 style="width: 100.0%; height: 100.0%;">                 Rohstofflager - 56 artists</div>                 ')[0];
+                popup_b3e1c7b9a95c4de6bd938d9502346e08.setContent(html_472bf739114240a0938c27f58b742baf);
+            
+
+            circle_marker_2ead7134d2554b24a1c8bafa2ebf80bd.bindPopup(popup_b3e1c7b9a95c4de6bd938d9502346e08);
+
+            
+        
+        
+            
+
+            var circle_marker_66944c65e2b24263ab094ffe9e2b7cc8 = L.circle(
+                [47.343448,8.535557],
+                696.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_748a98e4d04149188da56690edb91731 = L.popup({maxWidth: '300'});
+
+            
+                var html_eec57e03abc04c94bf8afdfa5c6a2ed7 = $('         <div id="html_eec57e03abc04c94bf8afdfa5c6a2ed7"                 style="width: 100.0%; height: 100.0%;">                 Rote fabrik - 232 artists</div>                 ')[0];
+                popup_748a98e4d04149188da56690edb91731.setContent(html_eec57e03abc04c94bf8afdfa5c6a2ed7);
+            
+
+            circle_marker_66944c65e2b24263ab094ffe9e2b7cc8.bindPopup(popup_748a98e4d04149188da56690edb91731);
+
+            
+        
+        
+            
+
+            var circle_marker_fc6e4799a5654bf89b3a08c9405870f9 = L.circle(
+                [47.54055,7.617658],
+                723.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_26d748b8f642402cae84febe5904d476 = L.popup({maxWidth: '300'});
+
+            
+                var html_f4cb2f690b9d4467a0816a35b738d700 = $('         <div id="html_f4cb2f690b9d4467a0816a35b738d700"                 style="width: 100.0%; height: 100.0%;">                 ST. JAKOBSHALLE - 241 artists</div>                 ')[0];
+                popup_26d748b8f642402cae84febe5904d476.setContent(html_f4cb2f690b9d4467a0816a35b738d700);
+            
+
+            circle_marker_fc6e4799a5654bf89b3a08c9405870f9.bindPopup(popup_26d748b8f642402cae84febe5904d476);
+
+            
+        
+        
+            
+
+            var circle_marker_0bad215ebccd420995ad577be6a976cd = L.circle(
+                [47.137498,8.5868],
+                3.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_22abdcb014ce4f22ba44c43f1d80c994 = L.popup({maxWidth: '300'});
+
+            
+                var html_496e41a1be864e5f8484a6c5c99bf187 = $('         <div id="html_496e41a1be864e5f8484a6c5c99bf187"                 style="width: 100.0%; height: 100.0%;">                 Seminar Hotel - 1 artists</div>                 ')[0];
+                popup_22abdcb014ce4f22ba44c43f1d80c994.setContent(html_496e41a1be864e5f8484a6c5c99bf187);
+            
+
+            circle_marker_0bad215ebccd420995ad577be6a976cd.bindPopup(popup_22abdcb014ce4f22ba44c43f1d80c994);
+
+            
+        
+        
+            
+
+            var circle_marker_71a84cdd549b4178ab3a934f16de6023 = L.circle(
+                [47.547538,7.598329],
+                798.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_125144e9dc6c45dab30aa9ee284fb31d = L.popup({maxWidth: '300'});
+
+            
+                var html_2cec54512ced4a11adcf81007d2f3ebd = $('         <div id="html_2cec54512ced4a11adcf81007d2f3ebd"                 style="width: 100.0%; height: 100.0%;">                 Sommercasino - 266 artists</div>                 ')[0];
+                popup_125144e9dc6c45dab30aa9ee284fb31d.setContent(html_2cec54512ced4a11adcf81007d2f3ebd);
+            
+
+            circle_marker_71a84cdd549b4178ab3a934f16de6023.bindPopup(popup_125144e9dc6c45dab30aa9ee284fb31d);
+
+            
+        
+        
+            
+
+            var circle_marker_b5b387011bde464bac6968accf4f3b0d = L.circle(
+                [47.476133,8.304602],
+                165.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_3e5acc2542064215a0025a1dcbfcec4d = L.popup({maxWidth: '300'});
+
+            
+                var html_b913b826a5be42ee8fe2341ec17a295c = $('         <div id="html_b913b826a5be42ee8fe2341ec17a295c"                 style="width: 100.0%; height: 100.0%;">                 Stanzerei - 55 artists</div>                 ')[0];
+                popup_3e5acc2542064215a0025a1dcbfcec4d.setContent(html_b913b826a5be42ee8fe2341ec17a295c);
+            
+
+            circle_marker_b5b387011bde464bac6968accf4f3b0d.bindPopup(popup_3e5acc2542064215a0025a1dcbfcec4d);
+
+            
+        
+        
+            
+
+            var circle_marker_9ea75ed906674bf0b9b413cc5335f372 = L.circle(
+                [47.555034,7.587553],
+                537.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_25146585478348968062dedfaf8a43ac = L.popup({maxWidth: '300'});
+
+            
+                var html_7b0d883820b64b39bba376a8555bac6f = $('         <div id="html_7b0d883820b64b39bba376a8555bac6f"                 style="width: 100.0%; height: 100.0%;">                 The Bird&#39;s Eye Jazz Club - 179 artists</div>                 ')[0];
+                popup_25146585478348968062dedfaf8a43ac.setContent(html_7b0d883820b64b39bba376a8555bac6f);
+            
+
+            circle_marker_9ea75ed906674bf0b9b413cc5335f372.bindPopup(popup_25146585478348968062dedfaf8a43ac);
+
+            
+        
+        
+            
+
+            var circle_marker_1a42694398904af19794447aa22c6dd0 = L.circle(
+                [47.051551,8.299418],
+                402.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_50c5572882744dc69650628a26a3ba86 = L.popup({maxWidth: '300'});
+
+            
+                var html_878f575595194b3ca146fc8efe2f8389 = $('         <div id="html_878f575595194b3ca146fc8efe2f8389"                 style="width: 100.0%; height: 100.0%;">                 The Bruch Brothers - 134 artists</div>                 ')[0];
+                popup_50c5572882744dc69650628a26a3ba86.setContent(html_878f575595194b3ca146fc8efe2f8389);
+            
+
+            circle_marker_1a42694398904af19794447aa22c6dd0.bindPopup(popup_50c5572882744dc69650628a26a3ba86);
+
+            
+        
+        
+            
+
+            var circle_marker_81c01182cfb241008aa942c4fcb5bc5e = L.circle(
+                [47.414415,9.25495],
+                3.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_57edc4616a8246539fc6e049f04dd4b4 = L.popup({maxWidth: '300'});
+
+            
+                var html_f22902aaa05042849c9ac1b632fd3389 = $('         <div id="html_f22902aaa05042849c9ac1b632fd3389"                 style="width: 100.0%; height: 100.0%;">                 The Office - 1 artists</div>                 ')[0];
+                popup_57edc4616a8246539fc6e049f04dd4b4.setContent(html_f22902aaa05042849c9ac1b632fd3389);
+            
+
+            circle_marker_81c01182cfb241008aa942c4fcb5bc5e.bindPopup(popup_57edc4616a8246539fc6e049f04dd4b4);
+
+            
+        
+        
+            
+
+            var circle_marker_4ff370f665764351805fa12b79d847e7 = L.circle(
+                [47.365942,8.537712],
+                1845.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_f4447da21d7948fd9ef617faa2c8a2df = L.popup({maxWidth: '300'});
+
+            
+                var html_5dd93eb99ea34930995c69b8f0e4db3a = $('         <div id="html_5dd93eb99ea34930995c69b8f0e4db3a"                 style="width: 100.0%; height: 100.0%;">                 Tonhalle - 615 artists</div>                 ')[0];
+                popup_f4447da21d7948fd9ef617faa2c8a2df.setContent(html_5dd93eb99ea34930995c69b8f0e4db3a);
+            
+
+            circle_marker_4ff370f665764351805fa12b79d847e7.bindPopup(popup_f4447da21d7948fd9ef617faa2c8a2df);
+
+            
+        
+        
+            
+
+            var circle_marker_0c2388c6ba634a18b756d830faeec01a = L.circle(
+                [46.95047,7.443566],
+                153.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_880bb9fb21b243eaa224befad050bfaa = L.popup({maxWidth: '300'});
+
+            
+                var html_c334a748ebb14588b0edd8feaf62cccc = $('         <div id="html_c334a748ebb14588b0edd8feaf62cccc"                 style="width: 100.0%; height: 100.0%;">                 Turnhalle im Progr - 51 artists</div>                 ')[0];
+                popup_880bb9fb21b243eaa224befad050bfaa.setContent(html_c334a748ebb14588b0edd8feaf62cccc);
+            
+
+            circle_marker_0c2388c6ba634a18b756d830faeec01a.bindPopup(popup_880bb9fb21b243eaa224befad050bfaa);
+
+            
+        
+        
+            
+
+            var circle_marker_bf5092182b31457cae475d8bade15032 = L.circle(
+                [47.501699,8.728823],
+                99.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_6890620f090e491089bea4349deaadaa = L.popup({maxWidth: '300'});
+
+            
+                var html_9576c23e88bc4aedb7e1d3348bc3e5eb = $('         <div id="html_9576c23e88bc4aedb7e1d3348bc3e5eb"                 style="width: 100.0%; height: 100.0%;">                 Villa Sträuli - 33 artists</div>                 ')[0];
+                popup_6890620f090e491089bea4349deaadaa.setContent(html_9576c23e88bc4aedb7e1d3348bc3e5eb);
+            
+
+            circle_marker_bf5092182b31457cae475d8bade15032.bindPopup(popup_6890620f090e491089bea4349deaadaa);
+
+            
+        
+        
+            
+
+            var circle_marker_0fb5be4d7bf74316b606e48440864fe2 = L.circle(
+                [47.372906,8.534629],
+                489.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_a4c09beb2e8f47cb80fddca7952deaa0 = L.popup({maxWidth: '300'});
+
+            
+                var html_5fb86b97bb1b4b41bb608d2a1f3b9719 = $('         <div id="html_5fb86b97bb1b4b41bb608d2a1f3b9719"                 style="width: 100.0%; height: 100.0%;">                 Vior Club - 163 artists</div>                 ')[0];
+                popup_a4c09beb2e8f47cb80fddca7952deaa0.setContent(html_5fb86b97bb1b4b41bb608d2a1f3b9719);
+            
+
+            circle_marker_0fb5be4d7bf74316b606e48440864fe2.bindPopup(popup_a4c09beb2e8f47cb80fddca7952deaa0);
+
+            
+        
+        
+            
+
+            var circle_marker_e66de1b82f6c4c029dbc59b5c75afb6e = L.circle(
+                [47.375485,8.527116],
+                2391.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_edfe0806631842c98dd12835f210fda2 = L.popup({maxWidth: '300'});
+
+            
+                var html_7061f5ba3db64354afb584302cd38cd7 = $('         <div id="html_7061f5ba3db64354afb584302cd38cd7"                 style="width: 100.0%; height: 100.0%;">                 Volkshaus - 797 artists</div>                 ')[0];
+                popup_edfe0806631842c98dd12835f210fda2.setContent(html_7061f5ba3db64354afb584302cd38cd7);
+            
+
+            circle_marker_e66de1b82f6c4c029dbc59b5c75afb6e.bindPopup(popup_edfe0806631842c98dd12835f210fda2);
+
+            
+        
+        
+            
+
+            var circle_marker_b0b4d51182074d8a99ee575ce9f76b16 = L.circle(
+                [47.561136,7.593745],
+                474.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_ba43d2657b9b43e0afa7f0090c0f8dce = L.popup({maxWidth: '300'});
+
+            
+                var html_a708ff8c4a71404485a56899fd1089c3 = $('         <div id="html_a708ff8c4a71404485a56899fd1089c3"                 style="width: 100.0%; height: 100.0%;">                 Volkshaus Basel - 158 artists</div>                 ')[0];
+                popup_ba43d2657b9b43e0afa7f0090c0f8dce.setContent(html_a708ff8c4a71404485a56899fd1089c3);
+            
+
+            circle_marker_b0b4d51182074d8a99ee575ce9f76b16.bindPopup(popup_ba43d2657b9b43e0afa7f0090c0f8dce);
+
+            
+        
+        
+            
+
+            var circle_marker_e08550deacea43628e8e6449834e7160 = L.circle(
+                [47.375736,8.540001],
+                3.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_89fbe0ed24e6443eb003533f42348e57 = L.popup({maxWidth: '300'});
+
+            
+                var html_09e7c30bb9034dcaac1f2f82ee89bbc3 = $('         <div id="html_09e7c30bb9034dcaac1f2f82ee89bbc3"                 style="width: 100.0%; height: 100.0%;">                 Wallstreet Bar - 1 artists</div>                 ')[0];
+                popup_89fbe0ed24e6443eb003533f42348e57.setContent(html_09e7c30bb9034dcaac1f2f82ee89bbc3);
+            
+
+            circle_marker_e08550deacea43628e8e6449834e7160.bindPopup(popup_89fbe0ed24e6443eb003533f42348e57);
+
+            
+        
+        
+            
+
+            var circle_marker_4f12d356ef3f40b5b8a2816c009985d6 = L.circle(
+                [47.38662,8.53438],
+                72.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_d6c7a922330e462aac966b232e5cc85b = L.popup({maxWidth: '300'});
+
+            
+                var html_3c6563b803c1460db08dd6447b883a8c = $('         <div id="html_3c6563b803c1460db08dd6447b883a8c"                 style="width: 100.0%; height: 100.0%;">                 Werk21 - 24 artists</div>                 ')[0];
+                popup_d6c7a922330e462aac966b232e5cc85b.setContent(html_3c6563b803c1460db08dd6447b883a8c);
+            
+
+            circle_marker_4f12d356ef3f40b5b8a2816c009985d6.bindPopup(popup_d6c7a922330e462aac966b232e5cc85b);
+
+            
+        
+        
+            
+
+            var circle_marker_745b1bd53738410683c863913b8078cb = L.circle(
+                [47.366667,8.55],
+                1650.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_3e9858dd90e54784b28a589e7561a57f = L.popup({maxWidth: '300'});
+
+            
+                var html_263f469277cb4d49bb47f01944c5e7f7 = $('         <div id="html_263f469277cb4d49bb47f01944c5e7f7"                 style="width: 100.0%; height: 100.0%;">                 X-tra - 550 artists</div>                 ')[0];
+                popup_3e9858dd90e54784b28a589e7561a57f.setContent(html_263f469277cb4d49bb47f01944c5e7f7);
+            
+
+            circle_marker_745b1bd53738410683c863913b8078cb.bindPopup(popup_3e9858dd90e54784b28a589e7561a57f);
+
+            
+        
+        
+            
+
+            var circle_marker_824fc2e7fd404bb496b7af1166a1122d = L.circle(
+                [47.516667,7.683333],
+                3600.0,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_f9260b999db243c2a9dfd6e4db2a8bc5);
+            
+        
+            
+            var popup_f42112618efa438ab0f2127b625ca407 = L.popup({maxWidth: '300'});
+
+            
+                var html_43014d26a4a044c2ba13755c853a25f1 = $('         <div id="html_43014d26a4a044c2ba13755c853a25f1"                 style="width: 100.0%; height: 100.0%;">                 Z7 - 1200 artists</div>                 ')[0];
+                popup_f42112618efa438ab0f2127b625ca407.setContent(html_43014d26a4a044c2ba13755c853a25f1);
+            
+
+            circle_marker_824fc2e7fd404bb496b7af1166a1122d.bindPopup(popup_f42112618efa438ab0f2127b625ca407);
+
+            
+        
+        
+        
+        </script>
+        
