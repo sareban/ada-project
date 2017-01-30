@@ -139,6 +139,6 @@ def concatenateDataBandsInTown():
     df.drop_duplicates(inplace=True)
 
     # Save Again
-    pd.DataFrame(df, columns=list(df.columns)).to_csv('total_bands_in_town.csv', index=False, encoding="utf-8")
+    pd.DataFrame(df, columns=list(df.columns)).to_csv('../Events/total_bands_in_town.csv', index=False, encoding="utf-8")
     print('file saved')
     return df

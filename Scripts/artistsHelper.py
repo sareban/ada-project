@@ -28,7 +28,7 @@ def createArtistsDataFrame(filename):
     df.drop_duplicates(inplace=True)
     
     #Save to csv
-    filename = 'total_artists.csv'
+    filename = '../Artists/total_artists.csv'
     pd.DataFrame(df, columns=list(df.columns)).to_csv(filename, index=False,encoding="utf-8")
     print('file saved')
     return df
