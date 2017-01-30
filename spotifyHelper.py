@@ -15,8 +15,13 @@ import csv
 from multiprocessing import Process
 import sys
 import warnings
+import unicodedata
+
 warnings.filterwarnings('ignore')
 
+def remove_accents(s):
+    return ''.join(c for c in unicodedata.normalize('NFD', s)
+                  if unicodedata.category(c) != 'Mn')
 
 def spotifyRequest(base_url, name_request):
     # this function makes a request to the Spotify API
@@ -63,7 +68,7 @@ def getDataSpotifyArtist(artist_name):
             idx = []
             counter = 0
             for i,elem_json in enumerate(result_artists_array):
-                if elem_json['name'].lower() == artist_name.lower():
+                if remove_accents(elem_json['name'].lower()) == remove_accents(artist_name.lower()):
                     # Exact matching, remember index in table of results given in the JSON
                     counter += 1
                     idx.append(i)

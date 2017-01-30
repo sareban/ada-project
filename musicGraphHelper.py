@@ -13,7 +13,13 @@ from IPython.display import clear_output
 import numpy as np
 import sys
 import warnings
+import unicodedata
+
 warnings.filterwarnings('ignore')
+
+def remove_accents(s):
+    return ''.join(c for c in unicodedata.normalize('NFD', s)
+                  if unicodedata.category(c) != 'Mn')
 
 def musicGraphRequest(base_url, param_request):
     # this function makes a request to the Musicgraph API
@@ -78,7 +84,7 @@ def getDataMusicGraphArtist(row, type_request, api_key):
             idx = []
             counter = 0
             for i,elem_json in enumerate(result_artists_array):
-                if elem_json['name'].lower() == artist_name.lower():
+                if remove_accents(elem_json['name'].lower()) == remove_accents(artist_name.lower()):
                     # Exact matching, remember index in table of results given in the JSON
                     counter += 1
                     idx.append(i)
