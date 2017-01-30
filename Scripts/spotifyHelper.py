@@ -186,7 +186,7 @@ def concatDataSpotify():
     # input: dataFrame containing artists data
     # output :/
     
-    filename = "total_artists_Spotify*.csv"
+    filename = "../Artists/total_artists_Spotify*.csv"
     folder = 'SpotifyData'
     fileAdress = os.path.join(folder, filename)
     all_files = glob.glob(fileAdress)

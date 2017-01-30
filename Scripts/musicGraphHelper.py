@@ -270,7 +270,7 @@ def concatDataMusicGraph():
 
 
     # Save Again
-    pd.DataFrame(df, columns=list(df.columns)).to_csv('total_artists_MusicGraph.csv', index=False, encoding="utf-8")
+    pd.DataFrame(df, columns=list(df.columns)).to_csv('../Artists/total_artists_MusicGraph.csv', index=False, encoding="utf-8")
     print('file saved')
     return df
 
