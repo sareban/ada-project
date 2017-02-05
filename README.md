@@ -1,19 +1,17 @@
 # ada-project
 Repository for our ADA class project.
+The Data of Music - An attempt at quantitizing the musical landscape of Switzerland
 
-Cyril Pecoraro, Charlotte Burki, Mathieu Clavel
+Cyril Pecoraro (MTE), Charlotte Burki (SIE), Mathieu Clavel (IC)
 
 # Musical landscape of Switzerland
 
 ## Abstract
-For our project, we want to look into the cultural aspects of Swizerland, more specifically its musical life. We will gather informations from the web about concerts happening throughout the country and the artists related, and try to get useful insights out of it, which has been little done here so far according to our sources.
+For our project, we want to look into the cultural aspects of Swizerland, more specifically its musical life. We will gather informations from the web about concerts that happened or will happen throughout the country and the artists related, and try to get useful insights out of it, which has been little done here so far according to our own researches.
 
-## Data description 
-To this purpose, we will look into mainsteams platforms of today and before, such as [lastfm](http://www.last.fm), which also has an [API](http://www.last.fm/api) or [bandsintown](http://news.bandsintown.com/home) which also has an [API](https://www.bandsintown.com/api/overview), as well as Swiss ticketsale platforms and online cultural agendas such as [PetziTicket](https://www.petzitickets.ch/index.php?research_date=02%2F02%2F2014&surch_go=), (where data can get accessed by specifying a date).
+We answered most key aspects in our poster (located at the root of this repo), as well as during our presentation. Nonetheless, for any question, feel free to ask any of us. But as we know there will be little time to review all projects, we try to keep it simple here (everyone wants her or his well deserved holidays, right ?)
 
-The idea is to get the events happening in Switzerland, their dates and artists.
-
-## Feasibility and Risks, 
+### Feasibility and Risks, 
 Data wrangling will most probably be one of the main challenge of this project, given we won't be able to work solely through a well furnished API such as Twitter's or Amazon's, although would we be optimistic, we will be able to get and process the data early enough to raise and answer interesting questions about it.
 It will be possible to link the artists found with their [wikipedia page](https://www.wikipedia.org) and obtain information about their genre, country of origin.
 It will also be possible to link the artists to their position in the billboard.
@@ -24,12 +22,24 @@ Finally, it is aslo possible to compare the situation in Switzerland and the sit
 - Most of the API don't allow to search event by localization, they need to have the artist name.
 - Hard to find data for the previous years.
 
-## Deliverables
+### Deliverables
 The dataset that will be built and which doens't exist yet according to our researches, will be one of the delivrable.
-Another delivrable will be an interractive map.
+Another delivrable will be an interactive maps to explore the set.
 
-## Timeplan
+### Timeplan
 The first part of the project will be spent in defining clearer objective. Then we will spend a substancial ammount of time dor data wrangling, scrapping and cleaning. The questions we can raise with the data we obtain will be clearer once we get data.
+
+
+## Data description 
+We fetched event data from BandsInTown, ResidentAdvisor, Events.ch and La Route des Festivals, some which had API ready to use to query the data, other that we had to scrap manuallly using BeautifulSoup. In the end, we were left with 62'000 artists playing in 204'000 events, out in 22'000 venues. These numbers are already preprocessed, but we realised that they are not perfect, and some more cleaning would be useful, especially with Venues names where tricky duplicates were left.
+
+Furthermore, we queried several music intelligence services like MusicGraph or Spotify, or broader platforms such as Wikipedia, to augment our data (most frequently only a name, a date and a place). We were mostly looking for music genre and origins of artists. Using Google Places, we geocoded all of our venues, to be able to present the data on interactive maps.
+
+## Code description
+With the Scrapper notebooks, we scrapped data from all the plateforms we used (BandsInTown, Discogs - abandoned, Events.ch, MusicGraph, ResidentAdvisor, RouteDesFestivals, Spotifiy, Wikipedia). Sometimes, they call on python scripts located in ./Scripts/, where they may also store partial results before we concatenate everything down to single csvs, either in ./Artists/, ./Events/, or ./Venues/.  In the Preprocessing notebooks is our preprocessing pipeline for cleaning and augmenting the data. Then in the Stats notebook, we produce a few graphs for our understanding of the dataset, and the poster too, while in Visualization we produce the interactive maps, and in Visualization2 we create some more viz.
+
+## Results
+In ./FinalResults/ are our complete dataset in total eventsFinal.csv, a wordcloud embedded in a Swiss map, and both interactive maps that we created (heatmap displaying heat across the map of Switzerland following events and genre density, while detailedmap precisly show the number of events happening per level of geographical zoom).
 
 ## Interesting links
 - [Mapping the hometowns of billboard hot 100 artists](http://thedataface.com/mapping-the-hometowns-of-billboard-hot-100-artsts/)
