@@ -31,12 +31,14 @@ The first part of the project will be spent in defining clearer objective. Then 
 
 
 ## Data description 
+
 Events data were fetched from `BandsInTown`, `ResidentAdvisor`, `Events.ch` and `La Route des Festivals`, some which had API ready to use to query the data, other that needed to be scrapped manuallly using `BeautifulSoup`. In the end, we were left with **62'000 artists playing in 204'000 events, out in 22'000 venues**. Some more cleaning would be useful, especially with Venues names where tricky duplicates were left.
 
 Furthermore, several music intelligence services like `MusicGraph` or `Spotify`, or broader platforms such as `Wikipedia`, were used to augment the data (music genre and origins of artists). Using `Google Places`, all of the venues were geocoded, to be able to present the data on interactive maps.
 
 ## Code description
-With the Scrapper notebooks, we scrapped data from all the plateforms we used (BandsInTown, Discogs - abandoned, Events.ch, MusicGraph, ResidentAdvisor, RouteDesFestivals, Spotifiy, Wikipedia). Sometimes, they call on python scripts located in ./Scripts/, where they may also store partial results before we concatenate everything down to single csvs, either in ./Artists/, ./Events/, or ./Venues/.  In the Preprocessing notebooks is our preprocessing pipeline for cleaning and augmenting the data. Then in the Stats notebook, we produce a few graphs for our understanding of the dataset, and the poster too, while in Visualization we produce the interactive maps, and in Visualization2 we create some more viz.
+
+The scrapper notebooks presnts the code used to scrap the data from the platforms (BandsInTown, Discogs - abandoned, Events.ch, MusicGraph, ResidentAdvisor, RouteDesFestivals, Spotifiy, Wikipedia). Sometimes, they call on python scripts located in ./Scripts/, where they may also store partial results before they are concatenate to single csvs, either in `./Artists/`, `./Events/`, or `./Venues/`. The `Preprocessing` notebooks is the preprocessing pipeline for cleaning and augmenting the data. Then in the `Stats` notebook, there are few stats about the dataset, while in `Visualization` the interactive maps are produced using `Folium`, and in `Visualization2` plots and wordclouds are shown.
 
 ## Results
 
@@ -68,11 +70,6 @@ With the Scrapper notebooks, we scrapped data from all the plateforms we used (B
 
 [![Screen Shot 2017-02-06 at 10.50.43.png](https://s24.postimg.org/bl0fg8p1x/Screen_Shot_2017_02_06_at_10_50_43.png)](http://nbviewer.jupyter.org/github/sareban/ada-project/blob/master/poster%20ada.jpg)
 
-
-
-## Code description
-
-The scrapper notebooks presnts the code used to scrap the data from the platforms (BandsInTown, Discogs - abandoned, Events.ch, MusicGraph, ResidentAdvisor, RouteDesFestivals, Spotifiy, Wikipedia). Sometimes, they call on python scripts located in ./Scripts/, where they may also store partial results before they are concatenate to single csvs, either in `./Artists/`, `./Events/`, or `./Venues/`. The `Preprocessing` notebooks is the preprocessing pipeline for cleaning and augmenting the data. Then in the `Stats` notebook, there are few stats about the dataset, while in `Visualization` the interactive maps are produced using `Folium`, and in `Visualization2` plots and wordclouds are shown.
 
 ## Interesting links
 - [Mapping the hometowns of billboard hot 100 artists](http://thedataface.com/mapping-the-hometowns-of-billboard-hot-100-artsts/)
