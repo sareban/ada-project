@@ -31,15 +31,48 @@ The first part of the project will be spent in defining clearer objective. Then 
 
 
 ## Data description 
-We fetched event data from BandsInTown, ResidentAdvisor, Events.ch and La Route des Festivals, some which had API ready to use to query the data, other that we had to scrap manuallly using BeautifulSoup. In the end, we were left with 62'000 artists playing in 204'000 events, out in 22'000 venues. These numbers are already preprocessed, but we realised that they are not perfect, and some more cleaning would be useful, especially with Venues names where tricky duplicates were left.
+Events data were fetched from `BandsInTown`, `ResidentAdvisor`, `Events.ch` and `La Route des Festivals`, some which had API ready to use to query the data, other that needed to be scrapped manuallly using `BeautifulSoup`. In the end, we were left with **62'000 artists playing in 204'000 events, out in 22'000 venues**. Some more cleaning would be useful, especially with Venues names where tricky duplicates were left.
 
-Furthermore, we queried several music intelligence services like MusicGraph or Spotify, or broader platforms such as Wikipedia, to augment our data (most frequently only a name, a date and a place). We were mostly looking for music genre and origins of artists. Using Google Places, we geocoded all of our venues, to be able to present the data on interactive maps.
+Furthermore, several music intelligence services like `MusicGraph` or `Spotify`, or broader platforms such as `Wikipedia`, were used to augment the data (music genre and origins of artists). Using `Google Places`, all of the venues were geocoded, to be able to present the data on interactive maps.
 
 ## Code description
 With the Scrapper notebooks, we scrapped data from all the plateforms we used (BandsInTown, Discogs - abandoned, Events.ch, MusicGraph, ResidentAdvisor, RouteDesFestivals, Spotifiy, Wikipedia). Sometimes, they call on python scripts located in ./Scripts/, where they may also store partial results before we concatenate everything down to single csvs, either in ./Artists/, ./Events/, or ./Venues/.  In the Preprocessing notebooks is our preprocessing pipeline for cleaning and augmenting the data. Then in the Stats notebook, we produce a few graphs for our understanding of the dataset, and the poster too, while in Visualization we produce the interactive maps, and in Visualization2 we create some more viz.
 
 ## Results
-In ./FinalResults/ are our complete dataset in total eventsFinal.csv, a wordcloud embedded in a Swiss map, and both interactive maps that we created (heatmap displaying heat across the map of Switzerland following events and genre density, while detailedmap precisly show the number of events happening per level of geographical zoom).
+
+
+* The final dat set, in `.csv` format [can be accessed here](https://github.com/sareban/ada-project/blob/master/FinalResults/total_eventsFinal.csv)
+
+* The Interractive heatmap [can be accessed here](http://nbviewer.jupyter.org/github/sareban/ada-project/blob/master/FinalResults/heatmap_swissmusic.html)
+
+[![Screen Shot 2017-02-06 at 10.12.57.png](https://s24.postimg.org/m3ngro1jp/Screen_Shot_2017_02_06_at_10_12_57.png)](http://nbviewer.jupyter.org/github/sareban/ada-project/blob/master/FinalResults/heatmap_swissmusic.html)
+
+* The Interractive map with the details of the places [can be accessed here](http://nbviewer.jupyter.org/github/sareban/ada-project/blob/master/FinalResults/detailedmap_swissmusic.html)
+
+[![Screen Shot 2017-02-06 at 10.10.40.png](https://s29.postimg.org/mi1ssoe3r/Screen_Shot_2017_02_06_at_10_10_40.png)](http://nbviewer.jupyter.org/github/sareban/ada-project/blob/master/FinalResults/detailedmap_swissmusic.html)
+
+* Evolution of genres from 2006 to 2016
+<a href="https://plot.ly/~cyril.pecoraro/1/" target="_blank" title="Plot 1" style="display: block; text-align: center;"><img src="https://plot.ly/~cyril.pecoraro/1.png" alt="Plot 1" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+<script data-plotly="cyril.pecoraro:1"  src="https://plot.ly/embed.js" async></script>
+
+
+* Wordcloud of genres
+
+[![genres.png](https://s28.postimg.org/iy6ryv9ul/genres.png)](https://postimg.org/image/uajdgnijd/)
+
+* Wordcloud of origins of artists
+
+[![orig.png](https://s27.postimg.org/mek3y958z/orig.png)](https://postimg.org/image/ch9356xn3/)
+
+* Final poster of the project presentation at the Applied Machine Learning Days, EPFL, 31/01/17 [can be accessed here](https://github.com/sareban/ada-project/blob/master/poster%20ada.jpg)
+
+[![Screen Shot 2017-02-06 at 10.50.43.png](https://s24.postimg.org/bl0fg8p1x/Screen_Shot_2017_02_06_at_10_50_43.png)](http://nbviewer.jupyter.org/github/sareban/ada-project/blob/master/poster%20ada.jpg)
+
+
+
+## Code description
+
+The scrapper notebooks presnts the code used to scrap the data from the platforms (BandsInTown, Discogs - abandoned, Events.ch, MusicGraph, ResidentAdvisor, RouteDesFestivals, Spotifiy, Wikipedia). Sometimes, they call on python scripts located in ./Scripts/, where they may also store partial results before they are concatenate to single csvs, either in `./Artists/`, `./Events/`, or `./Venues/`. The `Preprocessing` notebooks is the preprocessing pipeline for cleaning and augmenting the data. Then in the `Stats` notebook, there are few stats about the dataset, while in `Visualization` the interactive maps are produced using `Folium`, and in `Visualization2` plots and wordclouds are shown.
 
 ## Interesting links
 - [Mapping the hometowns of billboard hot 100 artists](http://thedataface.com/mapping-the-hometowns-of-billboard-hot-100-artsts/)
